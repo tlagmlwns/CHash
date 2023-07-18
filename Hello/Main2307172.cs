@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 //using MyExtension;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -7,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Hello
-{
+{*/
     //b. 
     /*
     class Product
@@ -104,7 +105,7 @@ namespace Hello
     }*/
 
     //테스트 - 4
-    
+    /*
     class MyMath
     {
         public static int Fact(int x)
@@ -114,11 +115,11 @@ namespace Hello
                  y *=i;
             return y;
         }
-    }
+    }*/
     
-    
+    /*
     internal class Main2307172
-    {
+    {*/
         //a
         /*
         static void Swap(ref int input)
@@ -168,9 +169,9 @@ namespace Hello
         }
         */
 
-
+/*
         static void Main(string[] args)
-        {
+        {*/
             //a. 값복사와 참조복사 - ref(래퍼런스)
             /*
             int a = 10;
@@ -287,7 +288,7 @@ namespace Hello
              * 메인()메서드에서 무한 반복문을 사용하여 -1보다작거나 같은 값이 들어오면
              * 다시 입력받로독 하시오
              * 0이들어오면 무한반복문 나가시오.*/
-          
+          /*
             while (true)
             {
                 Console.Write("팩토리얼 구할 값 입력 : ");
@@ -312,3 +313,5 @@ namespace Hello
         }
     }
 }
+          */
+         
