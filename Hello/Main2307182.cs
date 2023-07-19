@@ -52,8 +52,6 @@ namespace Hello
         {
             public override void Eat(){ Console.WriteLine("고양이 사료"); }
         }*/
-
-        //d
         /*
         static void Main(string[] args)
         {*/
@@ -88,11 +86,10 @@ namespace Hello
             { new Dog(), new Cat(),new Dog(), new Cat(),
                 new Dog(), new Cat(),new Dog(), new Cat() };
             foreach (var item in Animals) { item.Eat(); }
-            */
-
-            //d
+  */
             /*
+            
         }
     }
 }
-*/
+            */
