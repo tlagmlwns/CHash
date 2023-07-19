@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Hello
-{
+{*/
     //1.
     /*
     class Animal
@@ -33,8 +33,8 @@ namespace Hello
         { 
             base.Color = "하얀"; Console.WriteLine("낭낭"); Console.WriteLine("Cat 클래스 호출"); 
         }
-    }*/
-
+    }
+    */
     //2. is
     /*
     class Animal
@@ -49,22 +49,20 @@ namespace Hello
     class Dog : Animal
     {
         public void Bark() //자식메서드에서 오버라이드되어 재 정의
-        {
-            base.Color = "노란"; Console.WriteLine("워뤙ㄹ");
-        }
+        {base.Color = "노란"; Console.WriteLine("워뤙ㄹ");}
     }
     class Cat : Animal
     {
         public void Meow() //자식메서드에서 오버라이드되어 재 정의
-        {
-            base.Color = "하얀"; Console.WriteLine("냥냥냥"); 
-        }
+        {base.Color = "하얀"; Console.WriteLine("냥냥냥");}
     }*/
 
     //as
+    /*
     class Mammal{public void Nurse() {Console.WriteLine("Nurse()");}}
     class Dog : Mammal { public void Bark() { Console.WriteLine("Bark()"); } }
     class Cat : Mammal { public void Meow() { Console.WriteLine("Meow()"); } }
+    *//*
     internal class Main230718w
     {
         static void Main(string[] args)
@@ -123,9 +121,10 @@ namespace Hello
                 if(item is Dog) { ((Dog)item).Bark();}
                 if(item is Cat) { ((Cat)item).Meow();}
                 Console.WriteLine();
-            }*/
-
+            }
+            */
             //as 연산자
+            /*
             Mammal mammal1 = new Dog();
             Mammal mammal2 = new Cat();
 
@@ -140,4 +139,4 @@ namespace Hello
             else Console.WriteLine("cat2 is null");
         }
     }
-}
+*/
