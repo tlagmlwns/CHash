@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(89, 18);
+            this.label1.Location = new System.Drawing.Point(145, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 30);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Location = new System.Drawing.Point(68, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 21);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.lable3.AutoSize = true;
             this.lable3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lable3.Location = new System.Drawing.Point(12, 135);
+            this.lable3.Location = new System.Drawing.Point(68, 159);
             this.lable3.Name = "lable3";
             this.lable3.Size = new System.Drawing.Size(29, 21);
             this.lable3.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(12, 186);
+            this.label4.Location = new System.Drawing.Point(68, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 21);
             this.label4.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(12, 240);
+            this.label5.Location = new System.Drawing.Point(68, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 21);
             this.label5.TabIndex = 4;
@@ -98,7 +98,7 @@
             // lb_short
             // 
             this.lb_short.AutoSize = true;
-            this.lb_short.Location = new System.Drawing.Point(122, 90);
+            this.lb_short.Location = new System.Drawing.Point(178, 114);
             this.lb_short.Name = "lb_short";
             this.lb_short.Size = new System.Drawing.Size(11, 12);
             this.lb_short.TabIndex = 1;
@@ -107,7 +107,7 @@
             // lb_int
             // 
             this.lb_int.AutoSize = true;
-            this.lb_int.Location = new System.Drawing.Point(122, 142);
+            this.lb_int.Location = new System.Drawing.Point(178, 166);
             this.lb_int.Name = "lb_int";
             this.lb_int.Size = new System.Drawing.Size(11, 12);
             this.lb_int.TabIndex = 2;
@@ -116,7 +116,7 @@
             // lb_double
             // 
             this.lb_double.AutoSize = true;
-            this.lb_double.Location = new System.Drawing.Point(122, 193);
+            this.lb_double.Location = new System.Drawing.Point(178, 217);
             this.lb_double.Name = "lb_double";
             this.lb_double.Size = new System.Drawing.Size(11, 12);
             this.lb_double.TabIndex = 3;
@@ -125,7 +125,7 @@
             // lb_Exception
             // 
             this.lb_Exception.AutoSize = true;
-            this.lb_Exception.Location = new System.Drawing.Point(122, 247);
+            this.lb_Exception.Location = new System.Drawing.Point(178, 271);
             this.lb_Exception.Name = "lb_Exception";
             this.lb_Exception.Size = new System.Drawing.Size(11, 12);
             this.lb_Exception.TabIndex = 4;
@@ -133,7 +133,7 @@
             // 
             // Bth_short
             // 
-            this.Bth_short.Location = new System.Drawing.Point(325, 79);
+            this.Bth_short.Location = new System.Drawing.Point(381, 103);
             this.Bth_short.Name = "Bth_short";
             this.Bth_short.Size = new System.Drawing.Size(97, 23);
             this.Bth_short.TabIndex = 5;
@@ -143,7 +143,7 @@
             // 
             // Bth_int
             // 
-            this.Bth_int.Location = new System.Drawing.Point(325, 131);
+            this.Bth_int.Location = new System.Drawing.Point(381, 155);
             this.Bth_int.Name = "Bth_int";
             this.Bth_int.Size = new System.Drawing.Size(97, 23);
             this.Bth_int.TabIndex = 6;
@@ -153,7 +153,7 @@
             // 
             // Btn_double
             // 
-            this.Btn_double.Location = new System.Drawing.Point(325, 182);
+            this.Btn_double.Location = new System.Drawing.Point(381, 206);
             this.Btn_double.Name = "Btn_double";
             this.Btn_double.Size = new System.Drawing.Size(97, 23);
             this.Btn_double.TabIndex = 7;
@@ -163,14 +163,14 @@
             // 
             // txt_Number
             // 
-            this.txt_Number.Location = new System.Drawing.Point(16, 308);
+            this.txt_Number.Location = new System.Drawing.Point(72, 332);
             this.txt_Number.Name = "txt_Number";
             this.txt_Number.Size = new System.Drawing.Size(306, 21);
             this.txt_Number.TabIndex = 8;
             // 
             // Bth_All
             // 
-            this.Bth_All.Location = new System.Drawing.Point(328, 308);
+            this.Bth_All.Location = new System.Drawing.Point(384, 332);
             this.Bth_All.Name = "Bth_All";
             this.Bth_All.Size = new System.Drawing.Size(94, 21);
             this.Bth_All.TabIndex = 9;
@@ -181,7 +181,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 332);
+            this.label3.Location = new System.Drawing.Point(78, 356);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 12);
             this.label3.TabIndex = 10;
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(549, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Bth_All);
             this.Controls.Add(this.txt_Number);
