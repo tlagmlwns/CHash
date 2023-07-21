@@ -63,5 +63,10 @@ namespace sm
             lb_ToUpper.Text = "-";
             lb_Trim.Text = "-";
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
