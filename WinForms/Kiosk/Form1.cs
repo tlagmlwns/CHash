@@ -15,24 +15,33 @@ namespace Kiosk
         {
             InitializeComponent();
         }
+        class Card
+        {
+            public string cardName;
+            public int onePrice = 0;  // 1카드당 가격
+            public int cardValue = 0; // 카드 장수
+            public int cardPrice = 0; // 카드 총 가격
+            public Card (string cN, int oP, int cV, int cP)
+            {
+                this.cardName = cN;
+                this.cardPrice = cP;
+                this.onePrice = oP; 
+                this.cardValue = cV;
+            }
+            public Card() { }
+        }
         
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             string strOrder = "";
-            int onePrice = 0;
-            int cardValue = 0;
-            int cardPrice = 0;
+            Card cardMhz = new Card(cbMhz.Text, int.Parse(mhzlbPrice.Text),int.Parse(textBox2.Text),( int.Parse(mhzlbPrice.Text)*int.Parse(textBox2.Text)));
             textBox1.Text = "";
             if (cbMhz.Checked == true)
             {
                 strOrder += cbMhz.Text + "\n";
                 textBox2.Text = hScrollBar1.Value.ToString();
-                onePrice = int.Parse(mhzlbPrice.Text);
-                cardValue = int.Parse(textBox2.Text);
-                cardPrice = onePrice * cardValue;
-
             }
-            textBox1.Text = strOrder + " : " +cardValue+ "장 : "+cardPrice + "원\n";
+            textBox1.Text = cardMhz.cardName + "\n : " +cardMhz.cardValue+ "장 : "+cardMhz.cardPrice + "원\n";
         }
         
         private void btn_Buy_Click(object sender, EventArgs e)
