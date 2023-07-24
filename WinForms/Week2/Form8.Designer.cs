@@ -71,9 +71,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.lbPayInfo = new System.Windows.Forms.ListBox();
             this.btnPay = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbCoke = new System.Windows.Forms.RadioButton();
+            this.rbCider = new System.Windows.Forms.RadioButton();
+            this.rbBoryCoke = new System.Windows.Forms.RadioButton();
+            this.rbOrange = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -137,7 +143,7 @@
             // 
             // btnEvent
             // 
-            this.btnEvent.Location = new System.Drawing.Point(36, 272);
+            this.btnEvent.Location = new System.Drawing.Point(30, 349);
             this.btnEvent.Name = "btnEvent";
             this.btnEvent.Size = new System.Drawing.Size(111, 23);
             this.btnEvent.TabIndex = 7;
@@ -275,7 +281,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(257, 272);
+            this.btnCancel.Location = new System.Drawing.Point(251, 349);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(111, 23);
             this.btnCancel.TabIndex = 18;
@@ -286,7 +292,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(34, 474);
+            this.label9.Location = new System.Drawing.Point(28, 551);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(85, 12);
             this.label9.TabIndex = 19;
@@ -294,7 +300,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 471);
+            this.textBox2.Location = new System.Drawing.Point(110, 548);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(252, 21);
             this.textBox2.TabIndex = 21;
@@ -409,7 +415,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblOrder);
-            this.groupBox3.Location = new System.Drawing.Point(36, 311);
+            this.groupBox3.Location = new System.Drawing.Point(30, 388);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(332, 147);
             this.groupBox3.TabIndex = 27;
@@ -447,7 +453,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(34, 517);
+            this.label12.Location = new System.Drawing.Point(28, 594);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 12);
             this.label12.TabIndex = 32;
@@ -461,15 +467,16 @@
             "무통장입금",
             "포인트",
             "현금"});
-            this.cbPay.Location = new System.Drawing.Point(36, 541);
+            this.cbPay.Location = new System.Drawing.Point(30, 618);
             this.cbPay.Name = "cbPay";
             this.cbPay.Size = new System.Drawing.Size(111, 20);
             this.cbPay.TabIndex = 33;
+            this.cbPay.SelectedIndexChanged += new System.EventHandler(this.cbPay_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(161, 517);
+            this.label13.Location = new System.Drawing.Point(155, 594);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 34;
@@ -484,15 +491,15 @@
             "3개월 할부",
             "6개월 할부",
             "10년 할부"});
-            this.lbPayInfo.Location = new System.Drawing.Point(163, 541);
+            this.lbPayInfo.Location = new System.Drawing.Point(157, 618);
             this.lbPayInfo.Name = "lbPayInfo";
             this.lbPayInfo.Size = new System.Drawing.Size(120, 88);
             this.lbPayInfo.TabIndex = 35;
-            this.lbPayInfo.SelectedIndexChanged += new System.EventHandler(this.lbPayInfo_SelectedIndexChanged);
+      
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(293, 538);
+            this.btnPay.Location = new System.Drawing.Point(287, 615);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(75, 23);
             this.btnPay.TabIndex = 36;
@@ -500,11 +507,69 @@
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rbOrange);
+            this.groupBox4.Controls.Add(this.rbBoryCoke);
+            this.groupBox4.Controls.Add(this.rbCider);
+            this.groupBox4.Controls.Add(this.rbCoke);
+            this.groupBox4.Location = new System.Drawing.Point(30, 253);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(332, 65);
+            this.groupBox4.TabIndex = 37;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "음료수 선택";
+            // 
+            // rbCoke
+            // 
+            this.rbCoke.AutoSize = true;
+            this.rbCoke.Location = new System.Drawing.Point(13, 27);
+            this.rbCoke.Name = "rbCoke";
+            this.rbCoke.Size = new System.Drawing.Size(47, 16);
+            this.rbCoke.TabIndex = 0;
+            this.rbCoke.TabStop = true;
+            this.rbCoke.Text = "콜라";
+            this.rbCoke.UseVisualStyleBackColor = true;
+            // 
+            // rbCider
+            // 
+            this.rbCider.AutoSize = true;
+            this.rbCider.Location = new System.Drawing.Point(86, 27);
+            this.rbCider.Name = "rbCider";
+            this.rbCider.Size = new System.Drawing.Size(59, 16);
+            this.rbCider.TabIndex = 1;
+            this.rbCider.TabStop = true;
+            this.rbCider.Text = "사이다";
+            this.rbCider.UseVisualStyleBackColor = true;
+            // 
+            // rbBoryCoke
+            // 
+            this.rbBoryCoke.AutoSize = true;
+            this.rbBoryCoke.Location = new System.Drawing.Point(179, 27);
+            this.rbBoryCoke.Name = "rbBoryCoke";
+            this.rbBoryCoke.Size = new System.Drawing.Size(47, 16);
+            this.rbBoryCoke.TabIndex = 2;
+            this.rbBoryCoke.TabStop = true;
+            this.rbBoryCoke.Text = "맥콜";
+            this.rbBoryCoke.UseVisualStyleBackColor = true;
+            // 
+            // rbOrange
+            // 
+            this.rbOrange.AutoSize = true;
+            this.rbOrange.Location = new System.Drawing.Point(257, 27);
+            this.rbOrange.Name = "rbOrange";
+            this.rbOrange.Size = new System.Drawing.Size(47, 16);
+            this.rbOrange.TabIndex = 3;
+            this.rbOrange.TabStop = true;
+            this.rbOrange.Text = "환타";
+            this.rbOrange.UseVisualStyleBackColor = true;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 657);
+            this.ClientSize = new System.Drawing.Size(825, 799);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.lbPayInfo);
             this.Controls.Add(this.label13);
@@ -551,6 +616,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,5 +668,10 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox lbPayInfo;
         private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton rbOrange;
+        private System.Windows.Forms.RadioButton rbBoryCoke;
+        private System.Windows.Forms.RadioButton rbCider;
+        private System.Windows.Forms.RadioButton rbCoke;
     }
 }
