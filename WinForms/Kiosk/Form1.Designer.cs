@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.cbMhz = new System.Windows.Forms.CheckBox();
+            this.cdMhz = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Buy = new System.Windows.Forms.Button();
             this.btn_Cannel = new System.Windows.Forms.Button();
@@ -84,7 +84,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnQA = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tb_message = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tpNew.SuspendLayout();
@@ -106,16 +106,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbMhz
+            // cdMhz
             // 
-            this.cbMhz.AutoSize = true;
-            this.cbMhz.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbMhz.Location = new System.Drawing.Point(7, 12);
-            this.cbMhz.Name = "cbMhz";
-            this.cbMhz.Size = new System.Drawing.Size(120, 16);
-            this.cbMhz.TabIndex = 1;
-            this.cbMhz.Text = "소드실드 무한존";
-            this.cbMhz.UseVisualStyleBackColor = true;
+            this.cdMhz.AutoSize = true;
+            this.cdMhz.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cdMhz.Location = new System.Drawing.Point(7, 12);
+            this.cdMhz.Name = "cdMhz";
+            this.cdMhz.Size = new System.Drawing.Size(120, 16);
+            this.cdMhz.TabIndex = 1;
+            this.cdMhz.Text = "소드실드 무한존";
+            this.cdMhz.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -462,7 +462,7 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.mhzlbPrice);
-            this.splitContainer1.Panel1.Controls.Add(this.cbMhz);
+            this.splitContainer1.Panel1.Controls.Add(this.cdMhz);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             // 
             // splitContainer1.Panel2
@@ -668,13 +668,14 @@
             this.label18.TabIndex = 5;
             this.label18.Text = "안내메세지";
             // 
-            // textBox5
+            // tb_message
             // 
-            this.textBox5.Location = new System.Drawing.Point(458, 34);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(236, 235);
-            this.textBox5.TabIndex = 14;
+            this.tb_message.Location = new System.Drawing.Point(458, 34);
+            this.tb_message.Multiline = true;
+            this.tb_message.Name = "tb_message";
+            this.tb_message.Size = new System.Drawing.Size(236, 235);
+            this.tb_message.TabIndex = 14;
+
             // 
             // Form1
             // 
@@ -682,7 +683,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(1080, 559);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tb_message);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnQA);
@@ -731,7 +732,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.CheckBox cbMhz;
+        private System.Windows.Forms.CheckBox cdMhz;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Buy;
         private System.Windows.Forms.Button btn_Cannel;
@@ -786,7 +787,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnQA;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tb_message;
     }
 }
 
