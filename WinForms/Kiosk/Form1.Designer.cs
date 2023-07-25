@@ -50,7 +50,7 @@
             this.tpNew = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.SslbPrice = new System.Windows.Forms.Label();
             this.cdSs = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -58,7 +58,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.PrlbPrice = new System.Windows.Forms.Label();
             this.cdPr = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -116,6 +116,7 @@
             this.cdMhz.TabIndex = 1;
             this.cdMhz.Text = "소드실드 무한존";
             this.cdMhz.UseVisualStyleBackColor = true;
+            this.cdMhz.CheckedChanged += new System.EventHandler(this.cdMhz_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -293,7 +294,7 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.label10);
-            this.splitContainer3.Panel1.Controls.Add(this.label11);
+            this.splitContainer3.Panel1.Controls.Add(this.SslbPrice);
             this.splitContainer3.Panel1.Controls.Add(this.cdSs);
             this.splitContainer3.Panel1.Controls.Add(this.label12);
             // 
@@ -315,14 +316,14 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "\\";
             // 
-            // label11
+            // SslbPrice
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(141, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 12);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "1000";
+            this.SslbPrice.AutoSize = true;
+            this.SslbPrice.Location = new System.Drawing.Point(141, 31);
+            this.SslbPrice.Name = "SslbPrice";
+            this.SslbPrice.Size = new System.Drawing.Size(29, 12);
+            this.SslbPrice.TabIndex = 8;
+            this.SslbPrice.Text = "1000";
             // 
             // cdSs
             // 
@@ -334,6 +335,7 @@
             this.cdSs.TabIndex = 1;
             this.cdSs.Text = "샤이니스타V";
             this.cdSs.UseVisualStyleBackColor = true;
+            this.cdSs.CheckedChanged += new System.EventHandler(this.cdSs_CheckedChanged);
             // 
             // label12
             // 
@@ -377,7 +379,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.label6);
-            this.splitContainer2.Panel1.Controls.Add(this.label7);
+            this.splitContainer2.Panel1.Controls.Add(this.PrlbPrice);
             this.splitContainer2.Panel1.Controls.Add(this.cdPr);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
             // 
@@ -399,14 +401,14 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "\\";
             // 
-            // label7
+            // PrlbPrice
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(141, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 12);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "1000";
+            this.PrlbPrice.AutoSize = true;
+            this.PrlbPrice.Location = new System.Drawing.Point(141, 31);
+            this.PrlbPrice.Name = "PrlbPrice";
+            this.PrlbPrice.Size = new System.Drawing.Size(29, 12);
+            this.PrlbPrice.TabIndex = 8;
+            this.PrlbPrice.Text = "1000";
             // 
             // cdPr
             // 
@@ -418,6 +420,7 @@
             this.cdPr.TabIndex = 1;
             this.cdPr.Text = "확장팩 페어리라이즈";
             this.cdPr.UseVisualStyleBackColor = true;
+            this.cdPr.CheckedChanged += new System.EventHandler(this.cdPr_CheckedChanged);
             // 
             // label8
             // 
@@ -675,7 +678,6 @@
             this.tb_message.Name = "tb_message";
             this.tb_message.Size = new System.Drawing.Size(236, 235);
             this.tb_message.TabIndex = 14;
-
             // 
             // Form1
             // 
@@ -756,7 +758,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label SslbPrice;
         private System.Windows.Forms.CheckBox cdSs;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox3;
@@ -764,7 +766,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label PrlbPrice;
         private System.Windows.Forms.CheckBox cdPr;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
