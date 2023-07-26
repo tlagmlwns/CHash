@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -35,6 +36,51 @@ namespace Week2
             label1.Text = "종료";
             
             Application.Exit();
+        }
+
+        private void toolStripMenuCa_Click(object sender, EventArgs e)
+        {
+            Process.Start("calc.exe");
+        }
+
+        private void ToolStripMenuPi_Click(object sender, EventArgs e)
+        {
+            Process.Start("mspaint.exe");
+        }
+
+  
+
+        private void toolStripMenuCo_Click(object sender, EventArgs e)
+        {
+            label1.Text = "복사 되었습니다.";
+        }
+
+        private void toolStripMenuPa_Click(object sender, EventArgs e)
+        {
+            label1.Text = "붙여놓기 되었습니다.";
+        }
+
+        private void toolStripMenuCu_Click(object sender, EventArgs e)
+        {
+            label1.Text = "잘라내기 되었습니다.";
+        }
+
+        private void frontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog dlg = new ColorDialog();
+            if (dlg.ShowDialog() == DialogResult.OK) { button1.ForeColor = dlg.Color; }
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog dlg = new ColorDialog();
+            if (dlg.ShowDialog() == DialogResult.OK) { button1.BackColor = dlg.Color; }
+        }
+
+        private void toolStripMenuFont_Click(object sender, EventArgs e)
+        {
+            FontDialog dlg = new FontDialog();
+            if (dlg.ShowDialog() == DialogResult.OK) { button1.Font = dlg.Font; }
         }
     }
 }

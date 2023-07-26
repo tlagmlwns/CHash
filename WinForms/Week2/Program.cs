@@ -14,7 +14,7 @@ namespace Week2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form20());
+            Application.Run(new Form26());
         }
     }
 }

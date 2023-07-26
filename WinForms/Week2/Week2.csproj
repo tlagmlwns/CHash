@@ -124,6 +124,36 @@
     <Compile Include="Form21.Designer.cs">
       <DependentUpon>Form21.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form22.Designer.cs">
+      <DependentUpon>Form22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form23.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form23.Designer.cs">
+      <DependentUpon>Form23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form24.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form24.Designer.cs">
+      <DependentUpon>Form24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form25.Designer.cs">
+      <DependentUpon>Form25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form26.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form26.Designer.cs">
+      <DependentUpon>Form26.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +195,24 @@
     </Compile>
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modaless.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modaless.Designer.cs">
+      <DependentUpon>Modaless.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalForm.Designer.cs">
+      <DependentUpon>ModalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgForm.Designer.cs">
+      <DependentUpon>MsgForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,6 +258,21 @@
     <EmbeddedResource Include="Form21.resx">
       <DependentUpon>Form21.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form22.resx">
+      <DependentUpon>Form22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form23.resx">
+      <DependentUpon>Form23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form24.resx">
+      <DependentUpon>Form24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form25.resx">
+      <DependentUpon>Form25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form26.resx">
+      <DependentUpon>Form26.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +293,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modaless.resx">
+      <DependentUpon>Modaless.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalForm.resx">
+      <DependentUpon>ModalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgForm.resx">
+      <DependentUpon>MsgForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
