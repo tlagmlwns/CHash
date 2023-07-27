@@ -155,11 +155,12 @@ namespace Kiosk
                         int x = rand.Next(1, 6); //(1, 10000);
                         if (x <= 5)
                         {   MessageBox.Show("축하합니다. HR", " 카드 결과");
+                            /*
                             if (x == 1) { HRCardNum = 1; modaless.Show(); } 
                             else if (x == 2) { HRCardNum = 2; modaless.Show(); } 
                             else if (x == 3) { HRCardNum = 3; modaless.Show(); } 
                             else if (x == 4) { HRCardNum = 4; modaless.Show(); } 
-                            else if (x == 5) { HRCardNum = 5; modaless.Show(); } 
+                            else if (x == 5) { HRCardNum = 5; modaless.Show(); } */
                             HR_time++; }
                         /*
                         else if (x <= 50) { MessageBox.Show("축하합니다. SR", " 카드 결과"); SR_time++; }
