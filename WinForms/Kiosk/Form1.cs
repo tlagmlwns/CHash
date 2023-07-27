@@ -14,11 +14,7 @@ namespace Kiosk
     public partial class Form1 : Form
     {
         ModalessForm modaless = null;
-        ModalessForm HRcard1;
-        ModalessForm HRcard2;
-        ModalessForm HRcard3;
-        ModalessForm HRcard4;
-        ModalessForm HRcard5;
+        static public int HRCardNum;
         class Card
         {
             public string cName;
@@ -159,11 +155,11 @@ namespace Kiosk
                         int x = rand.Next(1, 6); //(1, 10000);
                         if (x <= 5)
                         {   MessageBox.Show("축하합니다. HR", " 카드 결과");
-                            if (x == 1) { HRcard1 = new ModalessForm(); HRcard1.Show(); } 
-                            else if (x == 2) { HRcard2 = new ModalessForm(); HRcard2.Show(); } 
-                            else if (x == 3) { HRcard3 = new ModalessForm(); HRcard3.Show(); } 
-                            else if (x == 4) { HRcard4 = new ModalessForm(); HRcard4.Show(); } 
-                            else if (x == 5) { HRcard5 = new ModalessForm(); HRcard5.Show(); } 
+                            if (x == 1) { HRCardNum = 1; modaless.Show(); } 
+                            else if (x == 2) { HRCardNum = 2; modaless.Show(); } 
+                            else if (x == 3) { HRCardNum = 3; modaless.Show(); } 
+                            else if (x == 4) { HRCardNum = 4; modaless.Show(); } 
+                            else if (x == 5) { HRCardNum = 5; modaless.Show(); } 
                             HR_time++; }
                         /*
                         else if (x <= 50) { MessageBox.Show("축하합니다. SR", " 카드 결과"); SR_time++; }
