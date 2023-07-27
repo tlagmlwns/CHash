@@ -14,6 +14,7 @@ namespace Kiosk
     public partial class Form1 : Form
     {
         ModalessForm modaless = null; //확률공개표 모달리스대화상자
+        How2play how2Play = null; //사용설명서 모달리스대화상자
         HRcard1 hrcard1 = null; //HRcard의 1번카드 모달리스대화상자
         HRcard2 hrcard2 = null; //HRcard의 2번카드 모달리스대화상자
         HRcard3 hrcard3 = null; //HRcard의 3번카드 모달리스대화상자
@@ -50,7 +51,7 @@ namespace Kiosk
                 int MhzPrice = int.Parse(Mhz.cValue) * int.Parse(Mhz.cPrice);
                 strOrder += Mhz.cName + ", " + Mhz.cValue + ", "+MhzPrice+"원,"; tbOrder.Text = strOrder; 
             }
-            tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0;
+            tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0; Mhz.cValue = null; Mhz.cPrice = null;
 
         }
 
@@ -60,9 +61,9 @@ namespace Kiosk
             if (cdPr.Checked == true)
             {
                 int PrPrice = int.Parse(Pr.cValue) * int.Parse(Pr.cPrice);
-                strOrder += Pr.cName + ", " + Pr.cValue + ", " + PrPrice + "원,"; tbOrder.Text = strOrder;
+                strOrder +=  Pr.cName + ", " + Pr.cValue + ", " + PrPrice + "원,"; tbOrder.Text = strOrder;
             }
-            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0;
+            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0; Pr.cValue = null; Pr.cPrice = null;
 
         }
 
@@ -72,9 +73,9 @@ namespace Kiosk
             if (cdSs.Checked == true)
             {
                 int SsPrice = int.Parse(Ss.cValue) * int.Parse(Ss.cPrice);
-                strOrder += Ss.cName + ", " + Ss.cValue + ", " + SsPrice + "원,"; tbOrder.Text = strOrder;
+                strOrder +=  Ss.cName + ", " + Ss.cValue + ", " + SsPrice + "원,"; tbOrder.Text = strOrder;
             }
-            tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0;
+            tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0; Ss.cValue = null; Ss.cPrice = null;
 
         }
 
@@ -96,20 +97,24 @@ namespace Kiosk
         private void btn_Buy_Click(object sender, EventArgs e) //구매버튼
         {
             if (tbOrder.Text == "") 
-            {   MessageBox.Show("상품을 넣으세요."," 알림", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
+            { MessageBox.Show("상품을 넣으세요."," 알림", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
             if (cbPay.Text == "" || lbPayInfo.Text == "")
             { MessageBox.Show("결제방법을 선택하세요", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
 
-            string str = cbPay.Text + "(으)로 " + lbPayInfo.Text + " 결제방법을 " + "\n선택하셨습니다. ";
+            string str = cbPay.Text + "(으)로 " + lbPayInfo.Text + " 결제방법을 " + "\n선택하셨습니다.";
             MessageBox.Show(str, " 알림");
-        
+
+            int i, j, k;
             string[] splitData = tbOrder.Text.Split(',');
-
-            ListViewItem item = new ListViewItem(splitData[0]); // 첫 번째 요소를 항목으로 추가
-
-            for (int i = 1; i < splitData.Length; i++) {item.SubItems.Add(splitData[i]); } // 나머지 요소들을 서브 항목으로 추가
-
-            listView2.Items.Add(item); // ListView에 항목 추가
+            for (i = 0; i < splitData.Length - 1; i += 3)  //카드제목 넣기
+            {
+                //if (splitData[a] == " ") break;
+                ListViewItem item = new ListViewItem(splitData[i]); //첫 번째 요소0를 항목으로 추가
+                item.SubItems.Add(splitData[i+1]); //팩 수를 서브1 항목으로 추가
+                item.SubItems.Add(splitData[i+2]); //가격들을 서브2 항목으로 추가
+                listView2.Items.Add(item); // ListView에 항목 추가
+            }
+            
             tbOrder.Text = " "; strOrder = " "; //항목추가되면 그 전꺼 초기화
             tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0;
             tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0;
@@ -158,15 +163,15 @@ namespace Kiosk
                         if (x <= 5)
                         {   MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과"); //HR 카드만 이미지카드 올려줌
                             
-                            if (x == 1) { if (hrcard1 == null) { hrcard1 = new HRcard1(); hrcard1.Show(); } } 
+                            if (x == 1)      { if (hrcard1 == null) { hrcard1 = new HRcard1(); hrcard1.Show(); } } 
                             else if (x == 2) { if (hrcard2 == null) { hrcard2 = new HRcard2(); hrcard2.Show(); } }
                             else if (x == 3) { if (hrcard3 == null) { hrcard3 = new HRcard3(); hrcard3.Show(); } }
                             else if (x == 4) { if (hrcard4 == null) { hrcard4 = new HRcard4(); hrcard4.Show(); } }
                             else if (x == 5) { if (hrcard5 == null) { hrcard5 = new HRcard5(); hrcard5.Show(); } }
                             HR_time++; }
                         
-                        else if (x <= 50) { MessageBox.Show("축하합니다. SR - 슈퍼레어", " 카드 결과"); SR_time++; } //50
-                        else if (x <= 500) { MessageBox.Show("축하합니다. RRR - 트리플레어", " 카드 결과"); RRR_time++; }//500
+                        else if (x <= 50)   { MessageBox.Show("축하합니다. SR - 슈퍼레어", " 카드 결과"); SR_time++; } //50
+                        else if (x <= 500)  { MessageBox.Show("축하합니다. RRR - 트리플레어", " 카드 결과"); RRR_time++; }//500
                         else if (x <= 1000) { MessageBox.Show("축하합니다. RR - 더블레어", " 카드 결과"); }//1000
                         else if (x <= 2000) { MessageBox.Show("R - 레어", "카드 결과"); }//2000
                         else if (x <= 4000) { MessageBox.Show("U - 언커먼", "카드 결과"); }//4000
@@ -188,5 +193,8 @@ namespace Kiosk
 
         private void btnQA_Click(object sender, EventArgs e) //오류신고
         {MessageBox.Show("이메일 문의 : simh4jun@gmail.com", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);}
+
+        private void btnHow2play_Click(object sender, EventArgs e) //사용설명서
+        {if (how2Play == null) { how2Play = new How2play(); how2Play.Show(); }}
     }
 }

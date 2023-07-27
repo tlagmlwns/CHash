@@ -46,6 +46,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="How2play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="How2play.Designer.cs">
+      <DependentUpon>How2play.cs</DependentUpon>
+    </Compile>
     <Compile Include="HRcard1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,10 +88,19 @@
     <Compile Include="ModalessForm.Designer.cs">
       <DependentUpon>ModalessForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Point.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Point.Designer.cs">
+      <DependentUpon>Point.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="How2play.resx">
+      <DependentUpon>How2play.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HRcard1.resx">
       <DependentUpon>HRcard1.cs</DependentUpon>
@@ -104,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModalessForm.resx">
       <DependentUpon>ModalessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Point.resx">
+      <DependentUpon>Point.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

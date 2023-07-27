@@ -95,6 +95,9 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.tbPoint = new System.Windows.Forms.TextBox();
+            this.btnCharge = new System.Windows.Forms.Button();
+            this.btnHow2play = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tpNew.SuspendLayout();
@@ -242,12 +245,13 @@
             // 
             // btnOpenCard
             // 
+            this.btnOpenCard.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnOpenCard.Location = new System.Drawing.Point(710, 599);
             this.btnOpenCard.Name = "btnOpenCard";
             this.btnOpenCard.Size = new System.Drawing.Size(236, 38);
             this.btnOpenCard.TabIndex = 9;
             this.btnOpenCard.Text = "카드깡";
-            this.btnOpenCard.UseVisualStyleBackColor = true;
+            this.btnOpenCard.UseVisualStyleBackColor = false;
             this.btnOpenCard.Click += new System.EventHandler(this.btnOpenCard_Click);
             // 
             // tabControl1
@@ -539,9 +543,9 @@
             // 
             // btnLook
             // 
-            this.btnLook.Location = new System.Drawing.Point(314, 97);
+            this.btnLook.Location = new System.Drawing.Point(953, 233);
             this.btnLook.Name = "btnLook";
-            this.btnLook.Size = new System.Drawing.Size(125, 20);
+            this.btnLook.Size = new System.Drawing.Size(201, 34);
             this.btnLook.TabIndex = 13;
             this.btnLook.Text = "확률표 보기";
             this.btnLook.UseVisualStyleBackColor = true;
@@ -549,9 +553,9 @@
             // 
             // btnQA
             // 
-            this.btnQA.Location = new System.Drawing.Point(614, 173);
+            this.btnQA.Location = new System.Drawing.Point(953, 273);
             this.btnQA.Name = "btnQA";
-            this.btnQA.Size = new System.Drawing.Size(90, 19);
+            this.btnQA.Size = new System.Drawing.Size(201, 34);
             this.btnQA.TabIndex = 13;
             this.btnQA.Text = "오류 신고";
             this.btnQA.UseVisualStyleBackColor = true;
@@ -818,6 +822,32 @@
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
             // 
+            // tbPoint
+            // 
+            this.tbPoint.Location = new System.Drawing.Point(953, 38);
+            this.tbPoint.Name = "tbPoint";
+            this.tbPoint.Size = new System.Drawing.Size(113, 21);
+            this.tbPoint.TabIndex = 22;
+            // 
+            // btnCharge
+            // 
+            this.btnCharge.Location = new System.Drawing.Point(1072, 38);
+            this.btnCharge.Name = "btnCharge";
+            this.btnCharge.Size = new System.Drawing.Size(75, 21);
+            this.btnCharge.TabIndex = 23;
+            this.btnCharge.Text = "포인트충전";
+            this.btnCharge.UseVisualStyleBackColor = true;
+            // 
+            // btnHow2play
+            // 
+            this.btnHow2play.Location = new System.Drawing.Point(953, 193);
+            this.btnHow2play.Name = "btnHow2play";
+            this.btnHow2play.Size = new System.Drawing.Size(201, 34);
+            this.btnHow2play.TabIndex = 24;
+            this.btnHow2play.Text = "사용설명서";
+            this.btnHow2play.UseVisualStyleBackColor = true;
+            this.btnHow2play.Click += new System.EventHandler(this.btnHow2play_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -826,6 +856,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1166, 650);
+            this.Controls.Add(this.btnHow2play);
+            this.Controls.Add(this.btnCharge);
+            this.Controls.Add(this.tbPoint);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.tbOrder);
             this.Controls.Add(this.groupBox1);
@@ -954,6 +987,9 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.TextBox tbPoint;
+        private System.Windows.Forms.Button btnCharge;
+        private System.Windows.Forms.Button btnHow2play;
     }
 }
 
