@@ -14,6 +14,11 @@ namespace Kiosk
     public partial class Form1 : Form
     {
         ModalessForm modaless = null;
+        HRcard1 hrcard1 = null;
+        HRcard2 hrcard2 = null;
+        HRcard3 hrcard3 = null;
+        HRcard4 hrcard4 = null;
+        HRcard5 hrcard5 = null;
         static public int HRCardNum;
         class Card
         {
@@ -154,22 +159,22 @@ namespace Kiosk
                     {
                         int x = rand.Next(1, 6); //(1, 10000);
                         if (x <= 5)
-                        {   MessageBox.Show("축하합니다. HR", " 카드 결과");
-                            /*
-                            if (x == 1) { HRCardNum = 1; modaless.Show(); } 
-                            else if (x == 2) { HRCardNum = 2; modaless.Show(); } 
-                            else if (x == 3) { HRCardNum = 3; modaless.Show(); } 
-                            else if (x == 4) { HRCardNum = 4; modaless.Show(); } 
-                            else if (x == 5) { HRCardNum = 5; modaless.Show(); } */
+                        {   MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과");
+                            
+                            if (x == 1) { if (hrcard1 == null) { hrcard1 = new HRcard1(); hrcard1.Show(); } } 
+                            else if (x == 2) { if (hrcard2 == null) { hrcard2 = new HRcard2(); hrcard2.Show(); } }
+                            else if (x == 3) { if (hrcard3 == null) { hrcard3 = new HRcard3(); hrcard3.Show(); } }
+                            else if (x == 4) { if (hrcard4 == null) { hrcard4 = new HRcard4(); hrcard4.Show(); } }
+                            else if (x == 5) { if (hrcard5 == null) { hrcard5 = new HRcard5(); hrcard5.Show(); } }
                             HR_time++; }
-                        /*
-                        else if (x <= 50) { MessageBox.Show("축하합니다. SR", " 카드 결과"); SR_time++; }
-                        else if (x <= 500) { MessageBox.Show("축하합니다. RRR", " 카드 결과"); RRR_time++; }
-                        else if (x <= 1000) { MessageBox.Show("축하합니다. RR", " 카드 결과"); }
-                        else if (x <= 2000) { MessageBox.Show("R", "카드 결과"); }
-                        else if (x <= 4000) { MessageBox.Show("U", "카드 결과"); }
+                        
+                        else if (x <= 50) { MessageBox.Show("축하합니다. SR - 슈퍼레어", " 카드 결과"); SR_time++; }
+                        else if (x <= 500) { MessageBox.Show("축하합니다. RRR - 트리플레어", " 카드 결과"); RRR_time++; }
+                        else if (x <= 1000) { MessageBox.Show("축하합니다. RR - 더블레어", " 카드 결과"); }
+                        else if (x <= 2000) { MessageBox.Show("R - 레어", "카드 결과"); }
+                        else if (x <= 4000) { MessageBox.Show("U - 언커먼", "카드 결과"); }
                         else if (x <= 9999) { MessageBox.Show("C - 커먼", "카드 결과"); }
-                        else { MessageBox.Show(" 카드가 없습니다."," 알림");  }*/
+                        else { MessageBox.Show(" 카드가 없습니다."," 알림");  }
                     }
                     tb_message.Text = ($"- 결과 : 총 {pack*5}장 중\n HR : {HR_time}장, SR : {SR_time}장, RRR : {RRR_time}장 입니다.\n");
                     listView2.Items.Clear();
@@ -182,8 +187,7 @@ namespace Kiosk
         
         private void btnLook_Click(object sender, EventArgs e)
         {
-            if(modaless == null)
-            {  modaless = new ModalessForm(); modaless.Show(); }
+            if(modaless == null) {  modaless = new ModalessForm(); modaless.Show(); }
         }
 
         private void btnQA_Click(object sender, EventArgs e)

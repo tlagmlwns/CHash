@@ -64,16 +64,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tpHot = new System.Windows.Forms.TabPage();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.hScrollBar4 = new System.Windows.Forms.HScrollBar();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.tpAll = new System.Windows.Forms.TabPage();
             this.listView2 = new System.Windows.Forms.ListView();
             this.chCName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chCValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -92,6 +82,18 @@
             this.cbPay = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.hScrollBar4 = new System.Windows.Forms.HScrollBar();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tpNew.SuspendLayout();
@@ -107,13 +109,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tpHot.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // cdMhz
@@ -247,7 +252,6 @@
             // 
             this.tabControl1.Controls.Add(this.tpNew);
             this.tabControl1.Controls.Add(this.tpHot);
-            this.tabControl1.Controls.Add(this.tpAll);
             this.tabControl1.Location = new System.Drawing.Point(12, 101);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -268,7 +272,7 @@
             this.tpNew.Padding = new System.Windows.Forms.Padding(3);
             this.tpNew.Size = new System.Drawing.Size(432, 511);
             this.tpNew.TabIndex = 0;
-            this.tpNew.Text = "New 신상품";
+            this.tpNew.Text = "New 이번시즌";
             this.tpNew.UseVisualStyleBackColor = true;
             // 
             // splitContainer3
@@ -489,6 +493,9 @@
             // 
             // tpHot
             // 
+            this.tpHot.Controls.Add(this.pictureBox8);
+            this.tpHot.Controls.Add(this.pictureBox7);
+            this.tpHot.Controls.Add(this.pictureBox6);
             this.tpHot.Controls.Add(this.splitContainer4);
             this.tpHot.Controls.Add(this.pictureBox4);
             this.tpHot.Location = new System.Drawing.Point(4, 22);
@@ -496,112 +503,8 @@
             this.tpHot.Padding = new System.Windows.Forms.Padding(3);
             this.tpHot.Size = new System.Drawing.Size(432, 511);
             this.tpHot.TabIndex = 1;
-            this.tpHot.Text = "Hot 인기";
+            this.tpHot.Text = "All 전체";
             this.tpHot.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer4
-            // 
-            this.splitContainer4.Location = new System.Drawing.Point(6, 137);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.Controls.Add(this.label14);
-            this.splitContainer4.Panel1.Controls.Add(this.label15);
-            this.splitContainer4.Panel1.Controls.Add(this.checkBox3);
-            this.splitContainer4.Panel1.Controls.Add(this.label16);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.textBox4);
-            this.splitContainer4.Panel2.Controls.Add(this.hScrollBar4);
-            this.splitContainer4.Panel2.Controls.Add(this.label17);
-            this.splitContainer4.Size = new System.Drawing.Size(200, 107);
-            this.splitContainer4.SplitterDistance = 52;
-            this.splitContainer4.TabIndex = 14;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(176, 31);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(16, 12);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "\\";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(141, 31);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 12);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "1000";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkBox3.Location = new System.Drawing.Point(7, 12);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(190, 16);
-            this.checkBox3.TabIndex = 1;
-            this.checkBox3.Text = "포켓몬스터 소드실드 무한존";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(96, 31);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(39, 12);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "1팩 당";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(124, 27);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(46, 21);
-            this.textBox4.TabIndex = 8;
-            // 
-            // hScrollBar4
-            // 
-            this.hScrollBar4.Location = new System.Drawing.Point(3, 9);
-            this.hScrollBar4.Maximum = 110;
-            this.hScrollBar4.Name = "hScrollBar4";
-            this.hScrollBar4.Size = new System.Drawing.Size(190, 15);
-            this.hScrollBar4.TabIndex = 6;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(176, 30);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(17, 12);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "팩";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(200, 125);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // tpAll
-            // 
-            this.tpAll.Location = new System.Drawing.Point(4, 22);
-            this.tpAll.Name = "tpAll";
-            this.tpAll.Size = new System.Drawing.Size(432, 511);
-            this.tpAll.TabIndex = 2;
-            this.tpAll.Text = "전체";
-            this.tpAll.UseVisualStyleBackColor = true;
             // 
             // listView2
             // 
@@ -776,6 +679,131 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "결제방법";
             // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Location = new System.Drawing.Point(6, 137);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.label7);
+            this.splitContainer4.Panel1.Controls.Add(this.label14);
+            this.splitContainer4.Panel1.Controls.Add(this.checkBox1);
+            this.splitContainer4.Panel1.Controls.Add(this.label15);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer4.Panel2.Controls.Add(this.hScrollBar4);
+            this.splitContainer4.Panel2.Controls.Add(this.label16);
+            this.splitContainer4.Size = new System.Drawing.Size(200, 107);
+            this.splitContainer4.SplitterDistance = 52;
+            this.splitContainer4.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(176, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 12);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "\\";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(141, 31);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(29, 12);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "1000";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox1.Location = new System.Drawing.Point(7, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(120, 16);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "소드실드 무한존";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(96, 31);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(39, 12);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "1팩 당";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(124, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(46, 21);
+            this.textBox1.TabIndex = 8;
+            // 
+            // hScrollBar4
+            // 
+            this.hScrollBar4.Location = new System.Drawing.Point(3, 9);
+            this.hScrollBar4.Maximum = 110;
+            this.hScrollBar4.Name = "hScrollBar4";
+            this.hScrollBar4.Size = new System.Drawing.Size(190, 15);
+            this.hScrollBar4.TabIndex = 6;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(176, 30);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(17, 12);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "팩";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(200, 125);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(220, 6);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(203, 238);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 15;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(6, 267);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(203, 238);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 15;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(220, 267);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(203, 238);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -822,17 +850,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tpHot.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
             this.splitContainer4.Panel2.ResumeLayout(false);
             this.splitContainer4.Panel2.PerformLayout();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -855,7 +886,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpNew;
         private System.Windows.Forms.TabPage tpHot;
-        private System.Windows.Forms.TabPage tpAll;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label10;
@@ -875,15 +905,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.HScrollBar hScrollBar4;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Button btnLook;
         private System.Windows.Forms.Button btnQA;
@@ -902,6 +923,18 @@
         private System.Windows.Forms.ComboBox cbPay;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.HScrollBar hScrollBar4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 
