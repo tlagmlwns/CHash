@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Runtime.CompilerServices;
@@ -12,7 +13,12 @@ namespace Kiosk
 {
     public partial class Form1 : Form
     {
-
+        ModalessForm modaless = null;
+        ModalessForm HRcard1;
+        ModalessForm HRcard2;
+        ModalessForm HRcard3;
+        ModalessForm HRcard4;
+        ModalessForm HRcard5;
         class Card
         {
             public string cName;
@@ -56,7 +62,7 @@ namespace Kiosk
                 int PrPrice = int.Parse(Pr.cValue) * int.Parse(Pr.cPrice);
                 strOrder += Pr.cName + ", " + Pr.cValue + ", " + PrPrice + "원,"; tbOrder.Text = strOrder;
             }
-            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar1.Value = 0;
+            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0;
 
         }
 
@@ -68,7 +74,7 @@ namespace Kiosk
                 int SsPrice = int.Parse(Ss.cValue) * int.Parse(Ss.cPrice);
                 strOrder += Ss.cName + ", " + Ss.cValue + ", " + SsPrice + "원,"; tbOrder.Text = strOrder;
             }
-            tbSsP.Text = " "; cdSs.Checked = false; hScrollBar1.Value = 0;
+            tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0;
 
         }
 
@@ -90,15 +96,15 @@ namespace Kiosk
         private void btn_Buy_Click(object sender, EventArgs e)
         {
             if (tbOrder.Text == "") 
-            { MessageBox.Show("상품을 넣으세요.");
-                if (cbPay.Text == "" || lbPayInfo.Text == "")
-                    { MessageBox.Show("결제방법을 선택하세요"); return; } return; }
+            {   MessageBox.Show("상품을 넣으세요."," 알림", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
+            if (cbPay.Text == "" || lbPayInfo.Text == "")
+            { MessageBox.Show("결제방법을 선택하세요", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
+
             string str = cbPay.Text + "(으)로 " + lbPayInfo.Text + " 결제방법을 " + "\n선택하셨습니다. ";
-            MessageBox.Show(str);
-            // Split으로 문자열을 나누어 배열로 변환
+            MessageBox.Show(str, " 알림");
+        
             string[] splitData = tbOrder.Text.Split(',');
 
-            // ListView에 항목과 서브 항목 추가
             ListViewItem item = new ListViewItem(splitData[0]); // 첫 번째 요소를 항목으로 추가
 
             // 나머지 요소들을 서브 항목으로 추가
@@ -106,8 +112,12 @@ namespace Kiosk
             
             // ListView에 항목 추가
             listView2.Items.Add(item);
-          
-            // 입력란 비우기
+            tbOrder.Text = " "; strOrder = " ";
+            tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0;
+            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0;
+            tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0;
+            cbPay.SelectedIndex = 0;
+            lbPayInfo.Items.Clear();
             tbOrder.Clear();
         }
 
@@ -115,8 +125,10 @@ namespace Kiosk
         {
             tbOrder.Text = " "; strOrder = " ";
             tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0;
-            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0;
+            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0; 
             tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0;
+            cbPay.SelectedIndex = 0;
+            lbPayInfo.Items.Clear();
 
         }
 
@@ -133,29 +145,53 @@ namespace Kiosk
 
         private void btnOpenCard_Click(object sender, EventArgs e)
         {
+            tb_message.Clear();
             Random rand = new Random();
-            int time = 0;
-            if (listView2.Items != null) 
+            int pack = 0, HR_time = 0, SR_time = 0, RRR_time = 0;
+            if (listView2.Items != null)
             {
-                foreach (ListViewItem item in listView2.Items){string secondColumnValue = item.SubItems[1].Text; time = int.Parse(item.SubItems[1].Text); }
-                for (int i = 0; i < time; i++)
+                if (MessageBox.Show("카드를 오픈하시겠습니까?", " 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    int x = rand.Next(1, 10000);
-                    if (x < 50) { MessageBox.Show("축하합니다. S"); tb_message.Text += "축하합니다 S를 뽑으셨습니다."; }
-                    else if (x < 500) { MessageBox.Show("축하합니다. A"); tb_message.Text += "축하합니다 A를 뽑으셨습니다."; }
-                    else if (x < 1000) { MessageBox.Show("축하합니다. B"); }
-                    else if (x < 2000) { MessageBox.Show("C"); }
-                    else if (x < 4000) { MessageBox.Show("D"); }
-                    else if (x < 9999) { MessageBox.Show("F"); }
-                    else
+                    MessageBox.Show("구매하신 카드를 까는 중 입니다.", " 카드 오픈하기", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    foreach (ListViewItem item in listView2.Items) { string secondColumnValue = item.SubItems[1].Text; pack = int.Parse(item.SubItems[1].Text); }
+                    for (int i = 1; i < pack * 5+1; i++) //1팩당 5장
                     {
-                        MessageBox.Show("카드가 없습니다.");
-                        listView2.Clear();
+                        int x = rand.Next(1, 6); //(1, 10000);
+                        if (x <= 5)
+                        {   MessageBox.Show("축하합니다. HR", " 카드 결과");
+                            if (x == 1) { HRcard1 = new ModalessForm(); HRcard1.Show(); } 
+                            else if (x == 2) { HRcard2 = new ModalessForm(); HRcard2.Show(); } 
+                            else if (x == 3) { HRcard3 = new ModalessForm(); HRcard3.Show(); } 
+                            else if (x == 4) { HRcard4 = new ModalessForm(); HRcard4.Show(); } 
+                            else if (x == 5) { HRcard5 = new ModalessForm(); HRcard5.Show(); } 
+                            HR_time++; }
+                        /*
+                        else if (x <= 50) { MessageBox.Show("축하합니다. SR", " 카드 결과"); SR_time++; }
+                        else if (x <= 500) { MessageBox.Show("축하합니다. RRR", " 카드 결과"); RRR_time++; }
+                        else if (x <= 1000) { MessageBox.Show("축하합니다. RR", " 카드 결과"); }
+                        else if (x <= 2000) { MessageBox.Show("R", "카드 결과"); }
+                        else if (x <= 4000) { MessageBox.Show("U", "카드 결과"); }
+                        else if (x <= 9999) { MessageBox.Show("C - 커먼", "카드 결과"); }
+                        else { MessageBox.Show(" 카드가 없습니다."," 알림");  }*/
                     }
+                    tb_message.Text = ($"- 결과 : 총 {pack*5}장 중\n HR : {HR_time}장, SR : {SR_time}장, RRR : {RRR_time}장 입니다.\n");
+                    listView2.Items.Clear();
+
                 }
-                listView2.Clear();
-                tb_message.Clear();
+                else MessageBox.Show("취소되었습니다."," 알림");
             }
+
+        }
+        
+        private void btnLook_Click(object sender, EventArgs e)
+        {
+            if(modaless == null)
+            {  modaless = new ModalessForm(); modaless.Show(); }
+        }
+
+        private void btnQA_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("이메일 문의 : simh4jun@gmail.com", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
