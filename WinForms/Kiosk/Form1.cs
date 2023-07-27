@@ -154,7 +154,7 @@ namespace Kiosk
                     foreach (ListViewItem item in listView2.Items) { string secondColumnValue = item.SubItems[1].Text; pack = int.Parse(item.SubItems[1].Text); }
                     for (int i = 1; i < pack * 5+1; i++) //1팩당 5장
                     {
-                        int x = rand.Next(1, 6); //(1, 10000);
+                        int x = rand.Next(1, 25); //(1, 10000);
                         if (x <= 5)
                         {   MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과"); //HR 카드만 이미지카드 올려줌
                             
@@ -165,12 +165,12 @@ namespace Kiosk
                             else if (x == 5) { if (hrcard5 == null) { hrcard5 = new HRcard5(); hrcard5.Show(); } }
                             HR_time++; }
                         
-                        else if (x <= 50) { MessageBox.Show("축하합니다. SR - 슈퍼레어", " 카드 결과"); SR_time++; }
-                        else if (x <= 500) { MessageBox.Show("축하합니다. RRR - 트리플레어", " 카드 결과"); RRR_time++; }
-                        else if (x <= 1000) { MessageBox.Show("축하합니다. RR - 더블레어", " 카드 결과"); }
-                        else if (x <= 2000) { MessageBox.Show("R - 레어", "카드 결과"); }
-                        else if (x <= 4000) { MessageBox.Show("U - 언커먼", "카드 결과"); }
-                        else if (x <= 9999) { MessageBox.Show("C - 커먼", "카드 결과"); }
+                        else if (x <= 50) { MessageBox.Show("축하합니다. SR - 슈퍼레어", " 카드 결과"); SR_time++; } //50
+                        else if (x <= 500) { MessageBox.Show("축하합니다. RRR - 트리플레어", " 카드 결과"); RRR_time++; }//500
+                        else if (x <= 1000) { MessageBox.Show("축하합니다. RR - 더블레어", " 카드 결과"); }//1000
+                        else if (x <= 2000) { MessageBox.Show("R - 레어", "카드 결과"); }//2000
+                        else if (x <= 4000) { MessageBox.Show("U - 언커먼", "카드 결과"); }//4000
+                        else if (x <= 9999) { MessageBox.Show("C - 커먼", "카드 결과"); }//9999
                         else { MessageBox.Show(" 카드가 없습니다."," 알림");  }
                     }
                     tb_message.Text = ($"- 결과 : 총 {pack*5}장 중\n" +
