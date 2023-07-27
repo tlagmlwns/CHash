@@ -64,24 +64,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tpHot = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.chCName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chCValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chCAllPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnLook = new System.Windows.Forms.Button();
-            this.btnQA = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.tb_message = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.도구ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.캡쳐ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.tbOrder = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbPayInfo = new System.Windows.Forms.ListBox();
-            this.cbPay = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -91,9 +76,21 @@
             this.hScrollBar4 = new System.Windows.Forms.HScrollBar();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.chCName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chCValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chCAllPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnLook = new System.Windows.Forms.Button();
+            this.btnQA = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tb_message = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.tbOrder = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbPayInfo = new System.Windows.Forms.ListBox();
+            this.cbPay = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnHow2play = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,16 +108,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tpHot.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,7 +146,7 @@
             // btn_Buy
             // 
             this.btn_Buy.BackColor = System.Drawing.Color.Red;
-            this.btn_Buy.Location = new System.Drawing.Point(468, 598);
+            this.btn_Buy.Location = new System.Drawing.Point(468, 571);
             this.btn_Buy.Name = "btn_Buy";
             this.btn_Buy.Size = new System.Drawing.Size(117, 40);
             this.btn_Buy.TabIndex = 3;
@@ -161,7 +157,7 @@
             // btn_Cannel
             // 
             this.btn_Cannel.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Cannel.Location = new System.Drawing.Point(591, 599);
+            this.btn_Cannel.Location = new System.Drawing.Point(591, 572);
             this.btn_Cannel.Name = "btn_Cannel";
             this.btn_Cannel.Size = new System.Drawing.Size(113, 40);
             this.btn_Cannel.TabIndex = 3;
@@ -173,7 +169,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(468, 171);
+            this.label1.Location = new System.Drawing.Point(468, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 5;
@@ -235,7 +231,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(710, 173);
+            this.label5.Location = new System.Drawing.Point(710, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 19);
             this.label5.TabIndex = 5;
@@ -244,7 +240,7 @@
             // btnOpenCard
             // 
             this.btnOpenCard.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnOpenCard.Location = new System.Drawing.Point(710, 599);
+            this.btnOpenCard.Location = new System.Drawing.Point(710, 572);
             this.btnOpenCard.Name = "btnOpenCard";
             this.btnOpenCard.Size = new System.Drawing.Size(236, 38);
             this.btnOpenCard.TabIndex = 9;
@@ -256,7 +252,7 @@
             // 
             this.tabControl1.Controls.Add(this.tpNew);
             this.tabControl1.Controls.Add(this.tpHot);
-            this.tabControl1.Location = new System.Drawing.Point(12, 101);
+            this.tabControl1.Location = new System.Drawing.Point(12, 74);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(440, 537);
@@ -510,179 +506,35 @@
             this.tpHot.Text = "All 전체";
             this.tpHot.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // pictureBox8
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chCName,
-            this.chCValue,
-            this.chCAllPrice});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(711, 193);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(235, 400);
-            this.listView2.TabIndex = 12;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(220, 267);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(203, 238);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabStop = false;
             // 
-            // chCName
+            // pictureBox7
             // 
-            this.chCName.Text = "카드 이름";
-            this.chCName.Width = 95;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(6, 267);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(203, 238);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 15;
+            this.pictureBox7.TabStop = false;
             // 
-            // chCValue
+            // pictureBox6
             // 
-            this.chCValue.Text = "팩 수";
-            this.chCValue.Width = 50;
-            // 
-            // chCAllPrice
-            // 
-            this.chCAllPrice.Text = "카드 총 액수";
-            this.chCAllPrice.Width = 85;
-            // 
-            // btnLook
-            // 
-            this.btnLook.Location = new System.Drawing.Point(953, 233);
-            this.btnLook.Name = "btnLook";
-            this.btnLook.Size = new System.Drawing.Size(201, 34);
-            this.btnLook.TabIndex = 13;
-            this.btnLook.Text = "확률표 보기";
-            this.btnLook.UseVisualStyleBackColor = true;
-            this.btnLook.Click += new System.EventHandler(this.btnLook_Click);
-            // 
-            // btnQA
-            // 
-            this.btnQA.Location = new System.Drawing.Point(953, 273);
-            this.btnQA.Name = "btnQA";
-            this.btnQA.Size = new System.Drawing.Size(201, 34);
-            this.btnQA.TabIndex = 13;
-            this.btnQA.Text = "오류 신고";
-            this.btnQA.UseVisualStyleBackColor = true;
-            this.btnQA.Click += new System.EventHandler(this.btnQA_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Red;
-            this.label18.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(468, 75);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(89, 19);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "안내메세지";
-            // 
-            // tb_message
-            // 
-            this.tb_message.Font = new System.Drawing.Font("맑은 고딕", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tb_message.Location = new System.Drawing.Point(468, 97);
-            this.tb_message.Multiline = true;
-            this.tb_message.Name = "tb_message";
-            this.tb_message.Size = new System.Drawing.Size(686, 57);
-            this.tb_message.TabIndex = 14;
-            this.tb_message.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.도구ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1166, 24);
-            this.menuStrip1.TabIndex = 16;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 도구ToolStripMenuItem
-            // 
-            this.도구ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.캡쳐ToolStripMenuItem});
-            this.도구ToolStripMenuItem.Name = "도구ToolStripMenuItem";
-            this.도구ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.도구ToolStripMenuItem.Text = "도구";
-            // 
-            // 캡쳐ToolStripMenuItem
-            // 
-            this.캡쳐ToolStripMenuItem.Name = "캡쳐ToolStripMenuItem";
-            this.캡쳐ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.캡쳐ToolStripMenuItem.Text = "캡쳐";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 39);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(285, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
-            // tbOrder
-            // 
-            this.tbOrder.Location = new System.Drawing.Point(468, 193);
-            this.tbOrder.Multiline = true;
-            this.tbOrder.Name = "tbOrder";
-            this.tbOrder.Size = new System.Drawing.Size(236, 240);
-            this.tbOrder.TabIndex = 19;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.lbPayInfo);
-            this.groupBox1.Controls.Add(this.cbPay);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(468, 439);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 153);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "결제수단";
-            // 
-            // lbPayInfo
-            // 
-            this.lbPayInfo.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbPayInfo.FormattingEnabled = true;
-            this.lbPayInfo.ItemHeight = 12;
-            this.lbPayInfo.Items.AddRange(new object[] {
-            "일시불",
-            "3개월 할부",
-            "6개월 할부"});
-            this.lbPayInfo.Location = new System.Drawing.Point(123, 54);
-            this.lbPayInfo.Name = "lbPayInfo";
-            this.lbPayInfo.Size = new System.Drawing.Size(95, 88);
-            this.lbPayInfo.TabIndex = 2;
-            // 
-            // cbPay
-            // 
-            this.cbPay.FormattingEnabled = true;
-            this.cbPay.Items.AddRange(new object[] {
-            "신용카드",
-            "무통장입금",
-            "포인트"});
-            this.cbPay.Location = new System.Drawing.Point(18, 54);
-            this.cbPay.Name = "cbPay";
-            this.cbPay.Size = new System.Drawing.Size(99, 20);
-            this.cbPay.TabIndex = 1;
-            this.cbPay.SelectedIndexChanged += new System.EventHandler(this.cbPay_SelectedIndexChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(144, 30);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 12);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "결제정보";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(36, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 12);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "결제방법";
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(220, 6);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(203, 238);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 15;
+            this.pictureBox6.TabStop = false;
             // 
             // splitContainer4
             // 
@@ -779,41 +631,161 @@
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox6
+            // listView2
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(220, 6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(203, 238);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chCName,
+            this.chCValue,
+            this.chCAllPrice});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(711, 166);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(235, 400);
+            this.listView2.TabIndex = 12;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
             // 
-            // pictureBox7
+            // chCName
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(6, 267);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(203, 238);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 15;
-            this.pictureBox7.TabStop = false;
+            this.chCName.Text = "카드 이름";
+            this.chCName.Width = 95;
             // 
-            // pictureBox8
+            // chCValue
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(220, 267);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(203, 238);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 15;
-            this.pictureBox8.TabStop = false;
+            this.chCValue.Text = "팩 수";
+            this.chCValue.Width = 50;
+            // 
+            // chCAllPrice
+            // 
+            this.chCAllPrice.Text = "카드 총 액수";
+            this.chCAllPrice.Width = 85;
+            // 
+            // btnLook
+            // 
+            this.btnLook.Location = new System.Drawing.Point(953, 206);
+            this.btnLook.Name = "btnLook";
+            this.btnLook.Size = new System.Drawing.Size(201, 34);
+            this.btnLook.TabIndex = 13;
+            this.btnLook.Text = "확률표 보기";
+            this.btnLook.UseVisualStyleBackColor = true;
+            this.btnLook.Click += new System.EventHandler(this.btnLook_Click);
+            // 
+            // btnQA
+            // 
+            this.btnQA.Location = new System.Drawing.Point(953, 246);
+            this.btnQA.Name = "btnQA";
+            this.btnQA.Size = new System.Drawing.Size(201, 34);
+            this.btnQA.TabIndex = 13;
+            this.btnQA.Text = "오류 신고";
+            this.btnQA.UseVisualStyleBackColor = true;
+            this.btnQA.Click += new System.EventHandler(this.btnQA_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Red;
+            this.label18.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label18.Location = new System.Drawing.Point(468, 48);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(89, 19);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "안내메세지";
+            // 
+            // tb_message
+            // 
+            this.tb_message.Font = new System.Drawing.Font("맑은 고딕", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_message.Location = new System.Drawing.Point(468, 70);
+            this.tb_message.Multiline = true;
+            this.tb_message.Name = "tb_message";
+            this.tb_message.Size = new System.Drawing.Size(686, 57);
+            this.tb_message.TabIndex = 14;
+            this.tb_message.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(285, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
+            // tbOrder
+            // 
+            this.tbOrder.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbOrder.Location = new System.Drawing.Point(468, 166);
+            this.tbOrder.Multiline = true;
+            this.tbOrder.Name = "tbOrder";
+            this.tbOrder.Size = new System.Drawing.Size(236, 240);
+            this.tbOrder.TabIndex = 19;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.lbPayInfo);
+            this.groupBox1.Controls.Add(this.cbPay);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Location = new System.Drawing.Point(468, 412);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(236, 153);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "결제수단";
+            // 
+            // lbPayInfo
+            // 
+            this.lbPayInfo.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbPayInfo.FormattingEnabled = true;
+            this.lbPayInfo.ItemHeight = 19;
+            this.lbPayInfo.Items.AddRange(new object[] {
+            " "});
+            this.lbPayInfo.Location = new System.Drawing.Point(123, 54);
+            this.lbPayInfo.Name = "lbPayInfo";
+            this.lbPayInfo.Size = new System.Drawing.Size(107, 80);
+            this.lbPayInfo.TabIndex = 2;
+            // 
+            // cbPay
+            // 
+            this.cbPay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPay.FormattingEnabled = true;
+            this.cbPay.Items.AddRange(new object[] {
+            "신용카드",
+            "무통장입금",
+            "포인트"});
+            this.cbPay.Location = new System.Drawing.Point(6, 54);
+            this.cbPay.Name = "cbPay";
+            this.cbPay.Size = new System.Drawing.Size(111, 20);
+            this.cbPay.TabIndex = 1;
+            this.cbPay.SelectedIndexChanged += new System.EventHandler(this.cbPay_SelectedIndexChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label19.Location = new System.Drawing.Point(150, 30);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 12);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "결제정보";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Location = new System.Drawing.Point(36, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 12);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "결제방법";
             // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Gold;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(953, 398);
+            this.pictureBox9.Location = new System.Drawing.Point(953, 371);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(201, 240);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -822,7 +794,7 @@
             // 
             // btnHow2play
             // 
-            this.btnHow2play.Location = new System.Drawing.Point(953, 193);
+            this.btnHow2play.Location = new System.Drawing.Point(953, 166);
             this.btnHow2play.Name = "btnHow2play";
             this.btnHow2play.Size = new System.Drawing.Size(201, 34);
             this.btnHow2play.TabIndex = 24;
@@ -837,7 +809,7 @@
             this.BackColor = System.Drawing.Color.Red;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1166, 650);
+            this.ClientSize = new System.Drawing.Size(1166, 623);
             this.Controls.Add(this.btnHow2play);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.tbOrder);
@@ -854,9 +826,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_Cannel);
             this.Controls.Add(this.btn_Buy);
-            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "포켓몬 카드 뽑기";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -880,20 +850,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tpHot.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
             this.splitContainer4.Panel2.ResumeLayout(false);
             this.splitContainer4.Panel2.PerformLayout();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -941,10 +909,7 @@
         private System.Windows.Forms.Button btnQA;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox tb_message;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.ToolStripMenuItem 도구ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 캡쳐ToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader chCName;
         private System.Windows.Forms.ColumnHeader chCValue;
         private System.Windows.Forms.ColumnHeader chCAllPrice;

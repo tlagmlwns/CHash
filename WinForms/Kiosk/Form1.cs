@@ -212,12 +212,12 @@ namespace Kiosk
         }
         
         private void btnLook_Click(object sender, EventArgs e) //확률공개
-        {if(modaless == null) {  modaless = new ModalessForm(); modaless.Show(); }}
+        {if(modaless == null) {  modaless = new ModalessForm(); modaless.Show(); modaless = null; }}
 
         private void btnQA_Click(object sender, EventArgs e) //오류신고
         {MessageBox.Show("이메일 문의 : simhejun@naver.com", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);}
 
         private void btnHow2play_Click(object sender, EventArgs e) //사용설명서
-        {if (how2Play == null) { how2Play = new How2play(); how2Play.Show(); }}
+        {if (how2Play == null) { how2Play = new How2play(); how2Play.Show(); how2Play = null; } }
     }
 }
