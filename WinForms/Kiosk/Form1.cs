@@ -151,7 +151,9 @@ namespace Kiosk
             tb_message.Clear();
             Random rand = new Random();
             int pack = 0, HR_time = 0, SR_time = 0, RRR_time = 0;
-            if (listView2.Items != null)
+            if (MessageBox.Show("카드를 구매하셨습니까?", " 경고", MessageBoxButtons.YesNo) == DialogResult.No)
+            { MessageBox.Show("카드를 구매하세요!", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+            else
             {
                 if (MessageBox.Show("카드를 오픈하시겠습니까?", " 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -207,14 +209,13 @@ namespace Kiosk
                 }
                 else MessageBox.Show("취소되었습니다."," 알림");
             }
-
         }
         
         private void btnLook_Click(object sender, EventArgs e) //확률공개
         {if(modaless == null) {  modaless = new ModalessForm(); modaless.Show(); }}
 
         private void btnQA_Click(object sender, EventArgs e) //오류신고
-        {MessageBox.Show("이메일 문의 : simh4jun@gmail.com", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);}
+        {MessageBox.Show("이메일 문의 : simhejun@naver.com", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);}
 
         private void btnHow2play_Click(object sender, EventArgs e) //사용설명서
         {if (how2Play == null) { how2Play = new How2play(); how2Play.Show(); }}
