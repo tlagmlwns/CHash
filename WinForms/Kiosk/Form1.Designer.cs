@@ -95,8 +95,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.tbPoint = new System.Windows.Forms.TextBox();
-            this.btnCharge = new System.Windows.Forms.Button();
             this.btnHow2play = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -822,22 +820,6 @@
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
             // 
-            // tbPoint
-            // 
-            this.tbPoint.Location = new System.Drawing.Point(953, 38);
-            this.tbPoint.Name = "tbPoint";
-            this.tbPoint.Size = new System.Drawing.Size(113, 21);
-            this.tbPoint.TabIndex = 22;
-            // 
-            // btnCharge
-            // 
-            this.btnCharge.Location = new System.Drawing.Point(1072, 38);
-            this.btnCharge.Name = "btnCharge";
-            this.btnCharge.Size = new System.Drawing.Size(75, 21);
-            this.btnCharge.TabIndex = 23;
-            this.btnCharge.Text = "포인트충전";
-            this.btnCharge.UseVisualStyleBackColor = true;
-            // 
             // btnHow2play
             // 
             this.btnHow2play.Location = new System.Drawing.Point(953, 193);
@@ -857,8 +839,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1166, 650);
             this.Controls.Add(this.btnHow2play);
-            this.Controls.Add(this.btnCharge);
-            this.Controls.Add(this.tbPoint);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.tbOrder);
             this.Controls.Add(this.groupBox1);
@@ -987,8 +967,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.TextBox tbPoint;
-        private System.Windows.Forms.Button btnCharge;
         private System.Windows.Forms.Button btnHow2play;
     }
 }
