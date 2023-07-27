@@ -160,7 +160,7 @@ namespace Kiosk
                     for (int i = 1; i < pack * 5+1; i++) //1팩당 5장
                     {
                         int x = rand.Next(1, 50); //(1, 10000);
-                        /*
+                        
                         if (x <= 3)
                         {
                             MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과"); //HR 카드만 이미지카드 올려줌
@@ -173,14 +173,15 @@ namespace Kiosk
                             HR_time++;
                         }
 
-                        else if (x <= 8) { MessageBox.Show("축하합니다. SR - 슈퍼레어", " 카드 결과"); SR_time++; } //50
-                        else if (x <= 10) { MessageBox.Show("축하합니다. RRR - 트리플레어", " 카드 결과"); RRR_time++; }//500
-                        else if (x <= 15) { MessageBox.Show("축하합니다. RR - 더블레어", " 카드 결과"); }//1000
-                        else if (x <= 25) { MessageBox.Show("R - 레어", "카드 결과"); }//2000
-                        else if (x <= 35) { MessageBox.Show("U - 언커먼", "카드 결과"); }//4000
-                        else if (x <= 50) { MessageBox.Show("C - 커먼", "카드 결과"); }//9999
-                        else { MessageBox.Show(" 카드가 없습니다.", " 알림"); }*/  //적당한 테스트용
-                        
+                        else if (x <= 8) { MessageBox.Show("축하합니다. SR - 슈퍼레어", " 카드 결과"); SR_time++; } 
+                        else if (x <= 10) { MessageBox.Show("축하합니다. RRR - 트리플레어", " 카드 결과"); RRR_time++; }
+                        else if (x <= 15) { MessageBox.Show("축하합니다. RR - 더블레어", " 카드 결과"); }
+                        else if (x <= 25) { MessageBox.Show("R - 레어", "카드 결과"); }
+                        else if (x <= 35) { MessageBox.Show("U - 언커먼", "카드 결과"); }
+                        else if (x <= 50) { MessageBox.Show("C - 커먼", "카드 결과"); }
+                        else { MessageBox.Show(" 카드가 없습니다.", " 알림"); }  //적당한 테스트용
+                        /*
+                        int x = rand.Next(1, 10000); //(1, 10000);
                         if (x <= 5)
                         {   MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과"); //HR 카드만 이미지카드 올려줌
                             
@@ -197,7 +198,7 @@ namespace Kiosk
                         else if (x <= 2000) { MessageBox.Show("R - 레어", "카드 결과"); }//2000
                         else if (x <= 4000) { MessageBox.Show("U - 언커먼", "카드 결과"); }//4000
                         else if (x <= 9999) { MessageBox.Show("C - 커먼", "카드 결과"); }//9999
-                        else { MessageBox.Show(" 카드가 없습니다."," 알림");  } //희망없는 진짜 실전용
+                        else { MessageBox.Show(" 카드가 없습니다."," 알림");  }*/ //희망없는 진짜 실전용
                     }
                     tb_message.Text = ($"- 결과 : 총 {pack*5}장 중\n" +
                         $" HR : {HR_time}장, SR : {SR_time}장, RRR : {RRR_time}장 입니다.\n"); //결과출력 나머지등급은 안셈
