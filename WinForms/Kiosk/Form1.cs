@@ -13,18 +13,18 @@ namespace Kiosk
 {
     public partial class Form1 : Form
     {
-        ModalessForm modaless = null;
-        HRcard1 hrcard1 = null;
-        HRcard2 hrcard2 = null;
-        HRcard3 hrcard3 = null;
-        HRcard4 hrcard4 = null;
-        HRcard5 hrcard5 = null;
+        ModalessForm modaless = null; //확률공개표 모달리스대화상자
+        HRcard1 hrcard1 = null; //HRcard의 1번카드 모달리스대화상자
+        HRcard2 hrcard2 = null; //HRcard의 2번카드 모달리스대화상자
+        HRcard3 hrcard3 = null; //HRcard의 3번카드 모달리스대화상자
+        HRcard4 hrcard4 = null; //HRcard의 4번카드 모달리스대화상자
+        HRcard5 hrcard5 = null; //HRcard의 5번카드 모달리스대화상자
         static public int HRCardNum;
-        class Card
+        class Card //카드
         {
-            public string cName;
-            public string cValue;
-            public string cPrice;
+            public string cName; //카드이름
+            public string cValue; //카드팩수
+            public string cPrice; //카드값
             public Card(string cName, string cValue, string cPrice)
             {
                 this.cName = cName;
@@ -32,7 +32,7 @@ namespace Kiosk
                 this.cPrice = cPrice;
             }
         }
-        public Form1()
+        public Form1() 
         {
             InitializeComponent();
             listView2.View = View.Details;
@@ -42,20 +42,19 @@ namespace Kiosk
 
         //int MhzPrice = 0, PrPrice = 0, SsPrice = 0;
 
-        public void cdMhz_CheckedChanged(object sender, EventArgs e)
+        public void cdMhz_CheckedChanged(object sender, EventArgs e) //카드1 선택시
         {
             Card Mhz = new Card(cdMhz.Text, tbMhzP.Text,mhzlbPrice.Text);
             if (cdMhz.Checked == true) 
             {
                 int MhzPrice = int.Parse(Mhz.cValue) * int.Parse(Mhz.cPrice);
                 strOrder += Mhz.cName + ", " + Mhz.cValue + ", "+MhzPrice+"원,"; tbOrder.Text = strOrder; 
-                //listView2.Items.Add(new ListViewItem(new string[] { Mhz.cName, Mhz.cValue, }));
             }
             tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0;
 
         }
 
-        private void cdPr_CheckedChanged(object sender, EventArgs e)
+        private void cdPr_CheckedChanged(object sender, EventArgs e) //카드2 선택시
         {
             Card Pr = new Card(cdPr.Text, tbPrP.Text, PrlbPrice.Text);
             if (cdPr.Checked == true)
@@ -67,7 +66,7 @@ namespace Kiosk
 
         }
 
-        private void cdSs_CheckedChanged(object sender, EventArgs e)
+        private void cdSs_CheckedChanged(object sender, EventArgs e) //카드3 선택시
         {
             Card Ss = new Card(cdSs.Text, tbSsP.Text, SslbPrice.Text);
             if (cdSs.Checked == true)
@@ -79,22 +78,22 @@ namespace Kiosk
 
         }
 
-        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e) 
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e) //카드1 스크롤로 카드팩 수 변동
         {
             tbMhzP.Text = hScrollBar1.Value.ToString();
         }
 
-        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e) //카드2 스크롤로 카드팩 수 변동
         {
             tbPrP.Text = hScrollBar2.Value.ToString();
         }
 
-        private void hScrollBar3_Scroll(object sender, ScrollEventArgs e)
+        private void hScrollBar3_Scroll(object sender, ScrollEventArgs e) //카드3 스크롤로 카드팩 수 변동
         {
             tbSsP.Text = hScrollBar3.Value.ToString();
         }
 
-        private void btn_Buy_Click(object sender, EventArgs e)
+        private void btn_Buy_Click(object sender, EventArgs e) //구매버튼
         {
             if (tbOrder.Text == "") 
             {   MessageBox.Show("상품을 넣으세요."," 알림", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
@@ -108,12 +107,10 @@ namespace Kiosk
 
             ListViewItem item = new ListViewItem(splitData[0]); // 첫 번째 요소를 항목으로 추가
 
-            // 나머지 요소들을 서브 항목으로 추가
-            for (int i = 1; i < splitData.Length; i++) {item.SubItems.Add(splitData[i]);}
-            
-            // ListView에 항목 추가
-            listView2.Items.Add(item);
-            tbOrder.Text = " "; strOrder = " ";
+            for (int i = 1; i < splitData.Length; i++) {item.SubItems.Add(splitData[i]); } // 나머지 요소들을 서브 항목으로 추가
+
+            listView2.Items.Add(item); // ListView에 항목 추가
+            tbOrder.Text = " "; strOrder = " "; //항목추가되면 그 전꺼 초기화
             tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0;
             tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0;
             tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0;
@@ -122,18 +119,18 @@ namespace Kiosk
             tbOrder.Clear();
         }
 
-        private void btn_Cannel_Click(object sender, EventArgs e)
+        private void btn_Cannel_Click(object sender, EventArgs e) //취소버튼(초기화)
         {
-            tbOrder.Text = " "; strOrder = " ";
-            tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0;
-            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0; 
-            tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0;
-            cbPay.SelectedIndex = 0;
-            lbPayInfo.Items.Clear();
+            tbOrder.Text = " "; strOrder = " "; //장바구니 초기화
+            tbMhzP.Text = " "; cdMhz.Checked = false; hScrollBar1.Value = 0; //카드1초기화
+            tbPrP.Text = " "; cdPr.Checked = false; hScrollBar2.Value = 0;  //카드2초기화
+            tbSsP.Text = " "; cdSs.Checked = false; hScrollBar3.Value = 0; //카드3초기화
+            cbPay.SelectedIndex = 0; //결제방법 초기화
+            lbPayInfo.Items.Clear(); //결제정보 초기화
 
         }
 
-        private void cbPay_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbPay_SelectedIndexChanged(object sender, EventArgs e) //결제방법
         {
             lbPayInfo.Items.Clear();
             if(cbPay.SelectedIndex == 0)
@@ -144,7 +141,7 @@ namespace Kiosk
             { lbPayInfo.Items.Add("N포인트"); lbPayInfo.Items.Add("해피포인트"); lbPayInfo.Items.Add("주유포인트"); }
         }
 
-        private void btnOpenCard_Click(object sender, EventArgs e)
+        private void btnOpenCard_Click(object sender, EventArgs e) //카드뽑기
         {
             tb_message.Clear();
             Random rand = new Random();
@@ -159,7 +156,7 @@ namespace Kiosk
                     {
                         int x = rand.Next(1, 6); //(1, 10000);
                         if (x <= 5)
-                        {   MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과");
+                        {   MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과"); //HR 카드만 이미지카드 올려줌
                             
                             if (x == 1) { if (hrcard1 == null) { hrcard1 = new HRcard1(); hrcard1.Show(); } } 
                             else if (x == 2) { if (hrcard2 == null) { hrcard2 = new HRcard2(); hrcard2.Show(); } }
@@ -176,7 +173,8 @@ namespace Kiosk
                         else if (x <= 9999) { MessageBox.Show("C - 커먼", "카드 결과"); }
                         else { MessageBox.Show(" 카드가 없습니다."," 알림");  }
                     }
-                    tb_message.Text = ($"- 결과 : 총 {pack*5}장 중\n HR : {HR_time}장, SR : {SR_time}장, RRR : {RRR_time}장 입니다.\n");
+                    tb_message.Text = ($"- 결과 : 총 {pack*5}장 중\n" +
+                        $" HR : {HR_time}장, SR : {SR_time}장, RRR : {RRR_time}장 입니다.\n"); //결과출력 나머지등급은 안셈
                     listView2.Items.Clear();
 
                 }
@@ -185,14 +183,10 @@ namespace Kiosk
 
         }
         
-        private void btnLook_Click(object sender, EventArgs e)
-        {
-            if(modaless == null) {  modaless = new ModalessForm(); modaless.Show(); }
-        }
+        private void btnLook_Click(object sender, EventArgs e) //확률공개
+        {if(modaless == null) {  modaless = new ModalessForm(); modaless.Show(); }}
 
-        private void btnQA_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("이메일 문의 : simh4jun@gmail.com", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        private void btnQA_Click(object sender, EventArgs e) //오류신고
+        {MessageBox.Show("이메일 문의 : simh4jun@gmail.com", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);}
     }
 }
