@@ -162,7 +162,7 @@ namespace Kiosk
                     for (int i = 1; i < pack * 5+1; i++) //1팩당 5장
                     {
                         int x = rand.Next(1, 50); //(1, 10000);
-                        
+                             
                         if (x <= 3)
                         {
                             MessageBox.Show("축하합니다. HR - 하이퍼레어", " 카드 결과"); //HR 카드만 이미지카드 올려줌

@@ -827,6 +827,7 @@
             this.Controls.Add(this.btn_Cannel);
             this.Controls.Add(this.btn_Buy);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "포켓몬 카드 뽑기";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
