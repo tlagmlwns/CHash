@@ -27,10 +27,9 @@ namespace Moble
             int num = rand.Next(2); //queue 다시 수정 바람 한번에 바뀜
             if (num == 0) 
             {   btnI4.Image = imageList1.Images[0];
-                if(btnI3.Image == null) btnI3.Image = btnI4.Image;
-                if (btnI2.Image == null) btnI2.Image = btnI3.Image;
-                if (btnI1.Image == null) btnI1.Image = btnI2.Image;
-                str = "Left";  queue.Enqueue(str);
+                if (btnI3.Image == null) { btnI3.Image = btnI4.Image; str = "Left"; queue.Enqueue(str); }
+                if (btnI2.Image == null) { btnI2.Image = btnI3.Image; str = "Left"; queue.Enqueue(str); }
+                if (btnI1.Image == null) { btnI1.Image = btnI2.Image; str = "Left"; queue.Enqueue(str); }
             }
             else
             {
@@ -38,10 +37,10 @@ namespace Moble
                 btnI4.Image = imageList1.Images[1]; btnI3.Image = btnI4.Image;
                 btnI2.Image = btnI3.Image; btnI1.Image = btnI2.Image; */
                 btnI4.Image = imageList1.Images[1];
-                if (btnI3.Image == null) btnI3.Image = btnI4.Image;
-                if (btnI2.Image == null) btnI2.Image = btnI3.Image;
-                if (btnI1.Image == null) btnI1.Image = btnI2.Image;
-                str = "Right"; queue.Enqueue(str);
+                if (btnI3.Image == null) { btnI3.Image = btnI4.Image; str = "Right"; queue.Enqueue(str); }
+                if (btnI2.Image == null) { btnI2.Image = btnI3.Image; str = "Right"; queue.Enqueue(str); }
+                if (btnI1.Image == null) { btnI1.Image = btnI2.Image; str = "Right"; queue.Enqueue(str); }
+                
             }
         }
         private void Clear()
