@@ -43,6 +43,8 @@
             btnI3 = new System.Windows.Forms.Button();
             btnI4 = new System.Windows.Forms.Button();
             labelProgressBar1 = new LabelProgressBar();
+            timer2 = new System.Windows.Forms.Timer(components);
+            lbStart = new System.Windows.Forms.Label();
             SuspendLayout();
             // 
             // lbScore
@@ -172,12 +174,28 @@
             labelProgressBar1.TextFont = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             labelProgressBar1.VisualMode = ProgressBarDisplayMode.CurrProgress;
             // 
+            // timer2
+            // 
+            
+            // 
+            // lbStart
+            // 
+            lbStart.AutoSize = true;
+            lbStart.Font = new System.Drawing.Font("맑은 고딕", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lbStart.Location = new System.Drawing.Point(185, 297);
+            lbStart.Name = "lbStart";
+            lbStart.Size = new System.Drawing.Size(110, 128);
+            lbStart.TabIndex = 8;
+            lbStart.Text = "3";
+            lbStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.RoyalBlue;
             ClientSize = new System.Drawing.Size(484, 661);
+            Controls.Add(lbStart);
             Controls.Add(labelProgressBar1);
             Controls.Add(btnI4);
             Controls.Add(btnI3);
@@ -210,5 +228,7 @@
         private System.Windows.Forms.Button btnI3;
         private System.Windows.Forms.Button btnI4;
         private LabelProgressBar labelProgressBar1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lbStart;
     }
 }
