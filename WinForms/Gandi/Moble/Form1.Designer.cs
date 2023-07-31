@@ -138,7 +138,7 @@
             btnI2.Name = "btnI2";
             btnI2.Size = new System.Drawing.Size(108, 76);
             btnI2.TabIndex = 6;
-            btnI2.Text = "button1";
+            btnI2.Text = "2";
             btnI2.UseVisualStyleBackColor = true;
             // 
             // btnI3
@@ -147,7 +147,7 @@
             btnI3.Name = "btnI3";
             btnI3.Size = new System.Drawing.Size(72, 59);
             btnI3.TabIndex = 6;
-            btnI3.Text = "button1";
+            btnI3.Text = "3";
             btnI3.UseVisualStyleBackColor = true;
             // 
             // btnI4
@@ -156,7 +156,7 @@
             btnI4.Name = "btnI4";
             btnI4.Size = new System.Drawing.Size(48, 45);
             btnI4.TabIndex = 6;
-            btnI4.Text = "button1";
+            btnI4.Text = "4";
             btnI4.UseVisualStyleBackColor = true;
             // 
             // labelProgressBar1

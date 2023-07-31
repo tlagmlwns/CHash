@@ -21,11 +21,28 @@ namespace Moble
         private int score = 0;
         private string str = "";
         Random rand = new Random();
+        Queue<string> queue = new Queue<string>();
         private void UIR()
         {
-            int num = rand.Next(2);
-            if (num == 0) { btnI1.Image = imageList1.Images[0]; str = "Left"; }
-            else { btnI1.Image = imageList1.Images[1]; str = "Right"; }
+            int num = rand.Next(2); //queue 다시 수정 바람 한번에 바뀜
+            if (num == 0) 
+            {   btnI4.Image = imageList1.Images[0];
+                if(btnI3.Image == null) btnI3.Image = btnI4.Image;
+                if (btnI2.Image == null) btnI2.Image = btnI3.Image;
+                if (btnI1.Image == null) btnI1.Image = btnI2.Image;
+                str = "Left";  queue.Enqueue(str);
+            }
+            else
+            {
+                /*
+                btnI4.Image = imageList1.Images[1]; btnI3.Image = btnI4.Image;
+                btnI2.Image = btnI3.Image; btnI1.Image = btnI2.Image; */
+                btnI4.Image = imageList1.Images[1];
+                if (btnI3.Image == null) btnI3.Image = btnI4.Image;
+                if (btnI2.Image == null) btnI2.Image = btnI3.Image;
+                if (btnI1.Image == null) btnI1.Image = btnI2.Image;
+                str = "Right"; queue.Enqueue(str);
+            }
         }
         private void Clear()
         {
@@ -51,13 +68,13 @@ namespace Moble
         }
         private void btnL_Click(object sender, EventArgs e)
         {
-            if (btnL.Text == str) { score += 10; btnI1.Image = null; }
+            if (btnL.Text == str) { score += 10; btnI1.Image = null; queue.Dequeue(); }
             else { score -= 5; MessageBox.Show("틀림 ㅋㅋ", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnR_Click(object sender, EventArgs e)
         {
-            if (btnR.Text == str) { score += 10; btnI1.Image = null; }
+            if (btnR.Text == str) { score += 10; btnI1.Image = null; queue.Dequeue(); }
             else { score -= 5; MessageBox.Show("틀림 ㅋㅋ", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
