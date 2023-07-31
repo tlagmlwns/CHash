@@ -31,18 +31,18 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lbScore = new System.Windows.Forms.Label();
-            progressBar1 = new System.Windows.Forms.ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
             lable2 = new System.Windows.Forms.Label();
             imageList1 = new System.Windows.Forms.ImageList(components);
-            btnImage = new System.Windows.Forms.Button();
+            btnI1 = new System.Windows.Forms.Button();
             btnR = new System.Windows.Forms.Button();
             btnL = new System.Windows.Forms.Button();
             btnStart = new System.Windows.Forms.Button();
             textBox1 = new System.Windows.Forms.TextBox();
-            button1 = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
-            button3 = new System.Windows.Forms.Button();
+            btnI2 = new System.Windows.Forms.Button();
+            btnI3 = new System.Windows.Forms.Button();
+            btnI4 = new System.Windows.Forms.Button();
+            labelProgressBar1 = new LabelProgressBar();
             SuspendLayout();
             // 
             // lbScore
@@ -57,14 +57,6 @@
             lbScore.Text = "200";
             lbScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // progressBar1
-            // 
-            progressBar1.Location = new System.Drawing.Point(12, 12);
-            progressBar1.Maximum = 20;
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new System.Drawing.Size(460, 30);
-            progressBar1.TabIndex = 1;
-            // 
             // timer1
             // 
             timer1.Interval = 2000;
@@ -75,7 +67,7 @@
             lable2.AutoSize = true;
             lable2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             lable2.ForeColor = System.Drawing.Color.White;
-            lable2.Location = new System.Drawing.Point(225, 100);
+            lable2.Location = new System.Drawing.Point(216, 100);
             lable2.Name = "lable2";
             lable2.Size = new System.Drawing.Size(52, 19);
             lable2.TabIndex = 2;
@@ -89,15 +81,15 @@
             imageList1.Images.SetKeyName(0, "cat.jpg");
             imageList1.Images.SetKeyName(1, "dog.jpg");
             // 
-            // btnImage
+            // btnI1
             // 
-            btnImage.ImageList = imageList1;
-            btnImage.Location = new System.Drawing.Point(175, 495);
-            btnImage.Name = "btnImage";
-            btnImage.Size = new System.Drawing.Size(133, 97);
-            btnImage.TabIndex = 3;
-            btnImage.Text = "1";
-            btnImage.UseVisualStyleBackColor = true;
+            btnI1.ImageList = imageList1;
+            btnI1.Location = new System.Drawing.Point(175, 495);
+            btnI1.Name = "btnI1";
+            btnI1.Size = new System.Drawing.Size(133, 97);
+            btnI1.TabIndex = 3;
+            btnI1.Text = "1";
+            btnI1.UseVisualStyleBackColor = true;
             // 
             // btnR
             // 
@@ -140,32 +132,45 @@
             textBox1.Size = new System.Drawing.Size(37, 23);
             textBox1.TabIndex = 5;
             // 
-            // button1
+            // btnI2
             // 
-            button1.Location = new System.Drawing.Point(187, 413);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(108, 76);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnI2.Location = new System.Drawing.Point(187, 413);
+            btnI2.Name = "btnI2";
+            btnI2.Size = new System.Drawing.Size(108, 76);
+            btnI2.TabIndex = 6;
+            btnI2.Text = "button1";
+            btnI2.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnI3
             // 
-            button2.Location = new System.Drawing.Point(205, 348);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(72, 59);
-            button2.TabIndex = 6;
-            button2.Text = "button1";
-            button2.UseVisualStyleBackColor = true;
+            btnI3.Location = new System.Drawing.Point(205, 348);
+            btnI3.Name = "btnI3";
+            btnI3.Size = new System.Drawing.Size(72, 59);
+            btnI3.TabIndex = 6;
+            btnI3.Text = "button1";
+            btnI3.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnI4
             // 
-            button3.Location = new System.Drawing.Point(216, 297);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(48, 45);
-            button3.TabIndex = 6;
-            button3.Text = "button1";
-            button3.UseVisualStyleBackColor = true;
+            btnI4.Location = new System.Drawing.Point(216, 297);
+            btnI4.Name = "btnI4";
+            btnI4.Size = new System.Drawing.Size(48, 45);
+            btnI4.TabIndex = 6;
+            btnI4.Text = "button1";
+            btnI4.UseVisualStyleBackColor = true;
+            // 
+            // labelProgressBar1
+            // 
+            labelProgressBar1.CustomText = "";
+            labelProgressBar1.Location = new System.Drawing.Point(12, 9);
+            labelProgressBar1.Maximum = 20;
+            labelProgressBar1.Name = "labelProgressBar1";
+            labelProgressBar1.ProgressColor = System.Drawing.Color.LightGreen;
+            labelProgressBar1.Size = new System.Drawing.Size(460, 23);
+            labelProgressBar1.TabIndex = 7;
+            labelProgressBar1.TextColor = System.Drawing.Color.Black;
+            labelProgressBar1.TextFont = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelProgressBar1.VisualMode = ProgressBarDisplayMode.CurrProgress;
             // 
             // Form1
             // 
@@ -173,16 +178,16 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.RoyalBlue;
             ClientSize = new System.Drawing.Size(484, 661);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(labelProgressBar1);
+            Controls.Add(btnI4);
+            Controls.Add(btnI3);
+            Controls.Add(btnI2);
             Controls.Add(textBox1);
             Controls.Add(btnStart);
             Controls.Add(btnR);
             Controls.Add(btnL);
-            Controls.Add(btnImage);
+            Controls.Add(btnI1);
             Controls.Add(lable2);
-            Controls.Add(progressBar1);
             Controls.Add(lbScore);
             Name = "Form1";
             Text = "Form1";
@@ -193,17 +198,17 @@
         #endregion
 
         private System.Windows.Forms.Label lbScore;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lable2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.Button btnI1;
         private System.Windows.Forms.Button btnR;
         private System.Windows.Forms.Button btnL;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnI2;
+        private System.Windows.Forms.Button btnI3;
+        private System.Windows.Forms.Button btnI4;
+        private LabelProgressBar labelProgressBar1;
     }
 }
