@@ -13,24 +13,22 @@ namespace Moble
     public partial class Form2 : Form
     {
         public Form2()
-        {
-            InitializeComponent();
-        }
+        { InitializeComponent(); }
         private int score = 0;
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             if (ScrollBar.MouseButtons == MouseButtons.Left) { score++; }
             else { score++; }
         }
-        private void Clear()
-        {
-            score = 0;
-
-        }
+        private void Clear() {score = 0;}
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            trackBar1.Value = 25;
             Clear();
+            MessageBox.Show("3", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("2", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("1", " 알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
             timer1.Start();
             labelProgressBar1.Value = 0;
         }

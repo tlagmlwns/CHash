@@ -56,6 +56,7 @@
             // 
             // timer1
             // 
+            timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
             // label2
