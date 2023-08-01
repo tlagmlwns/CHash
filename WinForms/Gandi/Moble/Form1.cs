@@ -19,35 +19,30 @@ namespace Moble
             InitializeComponent();
         }
         private int score = 0;
-        private string str = "";
+        private int realNum = 0;
+        private string mode = "";
         Random rand = new Random();
-        Queue<string> queue = new Queue<string>();
         private void UIR()
         {
-            int num = rand.Next(2); //queue 다시 수정 바람 한번에 바뀜
-            if (num == 0)
+            if (mode == "Easy")
             {
-                btnI4.Image = imageList1.Images[0];
-                if (btnI3.Image == null) { btnI3.Image = btnI4.Image; str = "Left"; queue.Enqueue(str); }
-                if (btnI2.Image == null) { btnI2.Image = btnI3.Image; str = "Left"; queue.Enqueue(str); }
-                if (btnI1.Image == null) { btnI1.Image = btnI2.Image; str = "Left"; queue.Enqueue(str); }
+                int num = rand.Next(0, 2);
+                if (num == 0) { btnI1.Image = imageList1.Images[0]; realNum = 1; }
+                else if (num == 1) { btnI1.Image = imageList1.Images[1]; realNum = 2; }
             }
-            else
+            else if (mode == "Hard")
             {
-                /*
-                btnI4.Image = imageList1.Images[1]; btnI3.Image = btnI4.Image;
-                btnI2.Image = btnI3.Image; btnI1.Image = btnI2.Image; */
-                btnI4.Image = imageList1.Images[1];
-                if (btnI3.Image == null) { btnI3.Image = btnI4.Image; str = "Right"; queue.Enqueue(str); }
-                if (btnI2.Image == null) { btnI2.Image = btnI3.Image; str = "Right"; queue.Enqueue(str); }
-                if (btnI1.Image == null) { btnI1.Image = btnI2.Image; str = "Right"; queue.Enqueue(str); }
-
+                int num = rand.Next(0, 4);
+                if (num == 0) { btnI1.Image = imageList1.Images[0]; realNum = 1; }
+                else if (num == 1) { btnI1.Image = imageList1.Images[1]; realNum = 2; }
+                else if (num == 2) { btnI1.Image = imageList1.Images[2]; realNum = 3; }
+                else if (num == 3) { btnI1.Image = imageList1.Images[3]; realNum = 4; }
             }
         }
         private void Clear()
         {
+            mode = "";
             score = 0; lbScore.Text = score.ToString();
-            textBox1.Text = "20";
             labelProgressBar1.Value = 0;
         }
 
@@ -56,47 +51,76 @@ namespace Moble
             lbScore.Text = score.ToString();
             labelProgressBar1.Value++;
             if (labelProgressBar1.Value == 20)
-            { timer1.Stop(); MessageBox.Show($"게임이 끝났습니다.\n당신의 점수는 {score}점 입니다."); Clear(); }
-            else { UIR(); textBox1.Text = (20 - (labelProgressBar1.Value)).ToString(); }
+            {
+                timer1.Stop(); 
+                MessageBox.Show(($"{mode}모드 게임이 끝났습니다.\n당신의 점수는 {score}점 입니다.")," 알림"
+                    ,MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (rbEasy.Checked == true) { rbEasy.Checked = false; }
+                else if (rbHard.Checked == true) { rbHard.Checked = false; }
+                Clear();
+            }
+            else { UIR(); }
 
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            timer2.Start();
             Clear();
-            UIR();
-            timer1.Start();
+            if (rbEasy.Checked == true)
+            {
+                btnUL.Enabled = false; btnUL.Visible = false;
+                btnUR.Enabled = false; btnUR.Visible = false;
+                mode = "Easy";
+                MessageBox.Show("이지모드 시작합니다.");
+                UIR();
+                btnI1.Image = null;
+                timer1.Start();
+            }
+            else if (rbHard.Checked == true)
+            {
+                btnUL.Enabled = true; btnUL.Visible = true;
+                btnUR.Enabled = true; btnUR.Visible = true;
+                mode = "Hard";
+                MessageBox.Show("하드모드 시작합니다.");
+                UIR();
+                btnI1.Image = null;
+                timer1.Start();
+            }
+            else MessageBox.Show("모드를 선택해주세요.");
         }
         private void btnL_Click(object sender, EventArgs e)
         {
-            if (btnL.Text == str) { score += 10; btnI1.Image = null; queue.Dequeue(); }
-            else { score -= 5; MessageBox.Show("틀림 ㅋㅋ", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            int L = 1;
+            if (L == realNum) { score += 10; btnI1.Image = null; }
+            else { score -= 5; MessageBox.Show("틀렸습니다.", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void btnR_Click(object sender, EventArgs e)
         {
-            if (btnR.Text == str) { score += 10; btnI1.Image = null; queue.Dequeue(); }
-            else { score -= 5; MessageBox.Show("틀림 ㅋㅋ", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            int R = 2;
+            if (R == realNum) { score += 10; btnI1.Image = null; }
+            else { score -= 5; MessageBox.Show("틀렸습니다.", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
-        /*
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            timer2 = new Timer();
-            timer2.Interval = 3000;
-            timer2.Start();
-            if (timer2.Interval / 1000 == 3) lbStart.Text = "3";
-            else if(timer2.Interval / 1000 == 2) lbStart.Text = "2";
-            else if(timer2.Interval / 1000 == 1) lbStart.Text = "1";
-            else if(timer2.Interval / 1000 == 0) lbStart.Text = "Start";
-            else
-            {
-                timer2.Stop();
-                lbStart.Text = "";
-                Clear();
-                UIR();
-                timer1.Start();
-            }
-        }*/
-    }
 
+        private void btnUL_Click(object sender, EventArgs e)
+        {
+            if (mode == "Easy") { }
+            else if (mode == "Hard")
+            {
+                int R = 3;
+                if (R == realNum) { score += 10; btnI1.Image = null; }
+                else { score -= 5; MessageBox.Show("틀렸습니다.", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+        }
+
+        private void btnUR_Click(object sender, EventArgs e)
+        {
+            if (mode == "Easy") { }
+            else if (mode == "Hard")
+            {
+                int R = 4;
+                if (R == realNum) { score += 10; btnI1.Image = null; }
+                else { score -= 5; MessageBox.Show("틀렸습니다.", " 경고", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+        }
+    }
 }
