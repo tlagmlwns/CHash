@@ -1,6 +1,6 @@
 ﻿namespace Moble
 {
-    partial class Form1
+    partial class LeftRight
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeftRight));
             lbScore = new System.Windows.Forms.Label();
             timer1 = new System.Windows.Forms.Timer(components);
             lable2 = new System.Windows.Forms.Label();
             imageList1 = new System.Windows.Forms.ImageList(components);
             btnI1 = new System.Windows.Forms.Button();
+            imageList2 = new System.Windows.Forms.ImageList(components);
             btnR = new System.Windows.Forms.Button();
             btnL = new System.Windows.Forms.Button();
             btnStart = new System.Windows.Forms.Button();
@@ -43,6 +44,9 @@
             rbHard = new System.Windows.Forms.RadioButton();
             btnUL = new System.Windows.Forms.Button();
             btnUR = new System.Windows.Forms.Button();
+            lb_Sec = new System.Windows.Forms.Label();
+            timer2 = new System.Windows.Forms.Timer(components);
+            timer3 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // lbScore
@@ -59,7 +63,6 @@
             // 
             // timer1
             // 
-            timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
             // lable2
@@ -78,21 +81,33 @@
             imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             imageList1.ImageStream = (System.Windows.Forms.ImageListStreamer)resources.GetObject("imageList1.ImageStream");
             imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            imageList1.Images.SetKeyName(0, "Ge.png");
-            imageList1.Images.SetKeyName(1, "Re.png");
-            imageList1.Images.SetKeyName(2, "Ye.png");
-            imageList1.Images.SetKeyName(3, "Or.png");
+            imageList1.Images.SetKeyName(0, "LR_Dog.png");
+            imageList1.Images.SetKeyName(1, "LR_Cat.png");
+            imageList1.Images.SetKeyName(2, "LR_Bird.png");
+            imageList1.Images.SetKeyName(3, "LR_Gorani.png");
             // 
             // btnI1
             // 
             btnI1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnI1.ForeColor = System.Drawing.Color.RoyalBlue;
-            btnI1.ImageList = imageList1;
-            btnI1.Location = new System.Drawing.Point(175, 389);
+            btnI1.ImageIndex = 4;
+            btnI1.ImageList = imageList2;
+            btnI1.Location = new System.Drawing.Point(167, 374);
             btnI1.Name = "btnI1";
-            btnI1.Size = new System.Drawing.Size(133, 124);
+            btnI1.Size = new System.Drawing.Size(151, 134);
             btnI1.TabIndex = 3;
             btnI1.UseVisualStyleBackColor = true;
+            // 
+            // imageList2
+            // 
+            imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            imageList2.ImageStream = (System.Windows.Forms.ImageListStreamer)resources.GetObject("imageList2.ImageStream");
+            imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            imageList2.Images.SetKeyName(0, "tvdog.png");
+            imageList2.Images.SetKeyName(1, "tvcat.png");
+            imageList2.Images.SetKeyName(2, "tvbird.png");
+            imageList2.Images.SetKeyName(3, "tvgorani.png");
+            imageList2.Images.SetKeyName(4, "tv.png");
             // 
             // btnR
             // 
@@ -134,14 +149,16 @@
             // 
             labelProgressBar1.CustomText = "";
             labelProgressBar1.Location = new System.Drawing.Point(12, 9);
-            labelProgressBar1.Maximum = 20;
+            labelProgressBar1.Maximum = 200;
             labelProgressBar1.Name = "labelProgressBar1";
             labelProgressBar1.ProgressColor = System.Drawing.Color.LightGreen;
+            labelProgressBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             labelProgressBar1.Size = new System.Drawing.Size(460, 23);
             labelProgressBar1.TabIndex = 7;
             labelProgressBar1.TextColor = System.Drawing.Color.Black;
             labelProgressBar1.TextFont = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            labelProgressBar1.VisualMode = ProgressBarDisplayMode.CurrProgress;
+            labelProgressBar1.Value = 200;
+            labelProgressBar1.VisualMode = ProgressBarDisplayMode.CustomText;
             // 
             // rbEasy
             // 
@@ -195,12 +212,33 @@
             btnUR.Visible = false;
             btnUR.Click += btnUR_Click;
             // 
-            // Form1
+            // lb_Sec
+            // 
+            lb_Sec.AutoSize = true;
+            lb_Sec.Font = new System.Drawing.Font("맑은 고딕", 63F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lb_Sec.Location = new System.Drawing.Point(195, 197);
+            lb_Sec.Name = "lb_Sec";
+            lb_Sec.Size = new System.Drawing.Size(96, 112);
+            lb_Sec.TabIndex = 12;
+            lb_Sec.Text = "3";
+            // 
+            // timer2
+            // 
+            timer2.Interval = 1000;
+            timer2.Tick += timer2_Tick;
+            // 
+            // timer3
+            // 
+            timer3.Interval = 1000;
+            timer3.Tick += timer3_Tick;
+            // 
+            // LeftRight
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.RoyalBlue;
             ClientSize = new System.Drawing.Size(484, 661);
+            Controls.Add(lb_Sec);
             Controls.Add(btnUR);
             Controls.Add(btnUL);
             Controls.Add(rbHard);
@@ -212,7 +250,7 @@
             Controls.Add(btnI1);
             Controls.Add(lable2);
             Controls.Add(lbScore);
-            Name = "Form1";
+            Name = "LeftRight";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -233,5 +271,9 @@
         private System.Windows.Forms.RadioButton rbHard;
         private System.Windows.Forms.Button btnUL;
         private System.Windows.Forms.Button btnUR;
+        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.Label lb_Sec;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
     }
 }
